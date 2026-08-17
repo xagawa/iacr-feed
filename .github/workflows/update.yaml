@@ -14,37 +14,44 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      # Get main branch
+      - name: Checkout main
+        uses: actions/checkout@v4
 
-      - uses: actions/setup-python@v5
+      - name: Setup Python
+        uses: actions/setup-python@v5
         with:
           python-version: "3.11"
 
-      - run: |
+      - name: Install dependencies
+        run: |
           pip install feedparser feedgen
 
-      - run: |
+      - name: Generate feed
+        run: |
           python generate_feed.py
 
-      - name: Publish feed to gh-pages
+      # Checkout gh-pages to a separate directory
+      - name: Checkout gh-pages
+        uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+          path: gh-pages
+
+      - name: Update feed.xml
         run: |
+          cp docs/feed.xml gh-pages/feed.xml
+
+      - name: Commit and push
+        run: |
+          cd gh-pages
+
           git config user.name github-actions
           git config user.email github-actions@github.com
 
-          mkdir -p /tmp/gh-pages
-
-          cp docs/feed.xml /tmp/gh-pages/feed.xml
-
-          git fetch origin gh-pages
-
-          git switch gh-pages
-
-          find . -mindepth 1 -maxdepth 1 ! -name ".git" -exec rm -rf {} +
-
-          cp /tmp/gh-pages/feed.xml .
-
           git add feed.xml
 
-          git commit -m "Update RSS feed" || true
+          git diff --cached --quiet && exit 0
 
-          git push origin gh-pages
+          git commit -m "Update RSS feed"
+          git push
