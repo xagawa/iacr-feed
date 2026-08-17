@@ -1,7 +1,8 @@
-import feedparser
-from email.utils import formatdate
-from feedgen.feed import FeedGenerator
+import re
 from pathlib import Path
+
+import feedparser
+from feedgen.feed import FeedGenerator
 
 SOURCE = "https://eprint.iacr.org/rss/rss.xml?order=recent"
 
@@ -13,22 +14,45 @@ fg.link(href="https://eprint.iacr.org/")
 fg.description("Mirror feed for Slack")
 fg.language("en")
 
-for entry in feed.entries[:100]:
+for entry in feed.entries[:50]:
 
     fe = fg.add_entry()
 
-    fe.title(entry.get("title", ""))
-
+    title = entry.get("title", "")
     link = entry.get("link", "")
-    fe.link(href=link)
 
+    fe.title(title)
+    fe.link(href=link)
     fe.guid(link, permalink=True)
 
-    if "published_parsed" in entry:
-        fe.pubDate(formatdate())
+    # get numbers from link
+    paper_id = ""
+    m = re.search(r"eprint\.iacr\.org/(\d{4}/\d+)", link)
+    if m:
+        paper_id = m.group(1)
 
+    # get authors 
+    authors = []
+
+    if "authors" in entry:
+        authors = [
+            a.get("name", "")
+            for a in entry.authors
+            if a.get("name")
+        ]
+
+    author_text = ", ".join(authors)
+
+    # get original description
     summary = entry.get("summary", "")
-    fe.description(summary)
+
+    description = (
+        f"[{paper_id}]\n"
+        f"Authors: {author_text}\n\n"
+        f"{summary}"
+    )
+
+    fe.description(description)
 
 Path("docs").mkdir(exist_ok=True)
 
