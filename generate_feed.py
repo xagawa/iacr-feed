@@ -1,5 +1,6 @@
 import re
 from pathlib import Path
+from email.utils import parsedate_to_datetime
 
 import feedparser
 from feedgen.feed import FeedGenerator
@@ -25,6 +26,11 @@ for entry in feed.entries[:50]:
     fe.link(href=link)
     fe.guid(link, permalink=True)
 
+    # get published date
+    pub_date = entry.get("published", "")
+    if pub_date:
+        fe.pubDate(parsedate_to_datetime(pub_date))
+
     # get numbers from link
     paper_id = ""
     m = re.search(r"eprint\.iacr\.org/(\d{4}/\d+)", link)
@@ -48,8 +54,8 @@ for entry in feed.entries[:50]:
 
     description = (
         f"[{paper_id}]\n"
-        f"Authors: {author_text}\n\n"
-        f"{summary}"
+        f"Authors: {author_text}\n"
+        f"Summary: {summary}"
     )
 
     fe.description(description)
