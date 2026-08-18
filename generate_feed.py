@@ -14,8 +14,18 @@ fg.title("IACR ePrint Recent")
 fg.link(href="https://eprint.iacr.org/")
 fg.description("Mirror feed for Slack")
 fg.language("en")
+fg.ttl(180)
 
-for entry in feed.entries[:50]:
+#
+# Sort by pubDate in descending order (newest first)
+#
+entries = sorted(
+    feed.entries,
+    key=lambda e: e.get("published_parsed", (0,) * 9),
+    reverse=True,
+)
+
+for entry in entries:
 
     fe = fg.add_entry()
 
@@ -26,18 +36,24 @@ for entry in feed.entries[:50]:
     fe.link(href=link)
     fe.guid(link, permalink=True)
 
-    # get published date
+    #
+    # Use the original pubDate from the RSS feed
+    #
     pub_date = entry.get("published", "")
     if pub_date:
         fe.pubDate(parsedate_to_datetime(pub_date))
 
-    # get numbers from link
+    #
+    # Paper ID
+    #
     paper_id = ""
     m = re.search(r"eprint\.iacr\.org/(\d{4}/\d+)", link)
     if m:
         paper_id = m.group(1)
 
-    # get authors 
+    #
+    # List of authors
+    #
     authors = []
 
     if "authors" in entry:
@@ -49,12 +65,14 @@ for entry in feed.entries[:50]:
 
     author_text = ", ".join(authors)
 
-    # get original description
+    #
+    # Original summary
+    #
     summary = entry.get("summary", "")
 
     description = (
-        f"[{paper_id}]\n"
-        f"Authors: {author_text}\n"
+        f"Paper: {paper_id}\n\n"
+        f"Authors: {author_text}\n\n"
         f"Summary: {summary}"
     )
 
