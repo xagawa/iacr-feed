@@ -9,6 +9,8 @@ SOURCE = "https://eprint.iacr.org/rss/rss.xml?order=recent"
 
 feed = feedparser.parse(SOURCE)
 
+print(f"Found {len(feed.entries)} entries in the feed")
+
 fg = FeedGenerator()
 fg.title("IACR ePrint Recent")
 fg.link(href="https://eprint.iacr.org/")
@@ -27,7 +29,7 @@ entries = sorted(
 
 for entry in entries:
 
-    fe = fg.add_entry()
+    fe = fg.add_entry(order='append')
 
     title = entry.get("title", "")
     link = entry.get("link", "")
@@ -51,6 +53,7 @@ for entry in entries:
     if m:
         paper_id = m.group(1)
 
+    print(paper_id) 
     #
     # List of authors
     #
