@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>IACR ePrint Recent</title><link>https://eprint.iacr.org/</link><description>Mirror feed for Slack</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><language>en</language><lastBuildDate>Sun, 23 Aug 2026 15:33:12 +0000</lastBuildDate><ttl>180</ttl><item><title>Enforcing Winner-Only Disclosure: Verifiable Tally Hiding for Weighted DAO Governance</title><link>https://eprint.iacr.org/2026/1773</link><description>Paper: 2026/1773
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>IACR ePrint Recent</title><link>https://eprint.iacr.org/</link><description>Mirror feed for Slack</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><language>en</language><lastBuildDate>Sun, 23 Aug 2026 18:44:52 +0000</lastBuildDate><ttl>180</ttl><item><title>Enforcing Winner-Only Disclosure: Verifiable Tally Hiding for Weighted DAO Governance</title><link>https://eprint.iacr.org/2026/1773</link><description>Paper: 2026/1773
 
 Authors: Jiayu Li, Gongli Li
 
