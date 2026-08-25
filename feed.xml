@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>IACR ePrint Recent</title><link>https://eprint.iacr.org/</link><description>Mirror feed for Slack</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><language>en</language><lastBuildDate>Tue, 25 Aug 2026 09:47:41 +0000</lastBuildDate><ttl>180</ttl><item><title>A Practical Optimization for Wiedemann XL</title><link>https://eprint.iacr.org/2026/1787</link><description>Paper: 2026/1787
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>IACR ePrint Recent</title><link>https://eprint.iacr.org/</link><description>Mirror feed for Slack</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><language>en</language><lastBuildDate>Tue, 25 Aug 2026 13:07:01 +0000</lastBuildDate><ttl>180</ttl><item><title>A Practical Optimization for Wiedemann XL</title><link>https://eprint.iacr.org/2026/1787</link><description>Paper: 2026/1787
 
 Authors: Tung Chou, Ruben Niederhagen
 
@@ -499,11 +499,41 @@ Authors: Lukasz Olejnik, Bartosz Naskrecki
 
 Summary: We show that the CRT-FHE scheme of Pradhan et al. is insecure for laws within its assumed error distribution range. The secret key follows from the public key by a single ring inversion whenever the public multiplier is a unit. The plaintext is recovered from any ciphertext under such a law without the secret key, for every multiplier, giving chosen-plaintext advantage $1/2$. We further show that the transformation from ordinary Ring-LWE to CRT-RLWE does not preserve the error distribution, so it does not establish that CRT-RLWE is at least as hard as Ring-LWE.
 
-One mechanism underlies both. The Chinese remainder theorem (CRT) function is reduced modulo $p_1p_2$ while its output is used modulo a coprime modulus $q$, so under every zero-preserving section an error in $p_2\mathcal{R}$ encodes to zero. The law $p_2B_1$ is so confined, meets the stated conditions, and decrypts correctly. Confinement is not a weakness of scale: scaling any baseline law by $p_2$ leaves its ordinary Ring-LWE problem exactly equivalent, while the reduced encoder destroys every error it produces. The reduction discrepancy is a multiple of $p_1p_2$ and not of $q$, so the small-error premise of the proof cannot remove it, and at the reported parameters a single error coefficient refutes the identity while satisfying that premise. The centered binomial $B_2$ separates the coefficient laws at total variation distance $3/8$, and at the reported dimension that distance between the induced polynomial laws is exponentially close to one.</description><guid isPermaLink="true">https://eprint.iacr.org/2026/1734</guid><pubDate>Wed, 19 Aug 2026 07:31:16 +0000</pubDate></item><item><title>TEE Server-Assisted Aggregated Offline Deployment Scheme for Multiplication Triples</title><link>https://eprint.iacr.org/2026/1733</link><description>Paper: 2026/1733
+One mechanism underlies both. The Chinese remainder theorem (CRT) function is reduced modulo $p_1p_2$ while its output is used modulo a coprime modulus $q$, so under every zero-preserving section an error in $p_2\mathcal{R}$ encodes to zero. The law $p_2B_1$ is so confined, meets the stated conditions, and decrypts correctly. Confinement is not a weakness of scale: scaling any baseline law by $p_2$ leaves its ordinary Ring-LWE problem exactly equivalent, while the reduced encoder destroys every error it produces. The reduction discrepancy is a multiple of $p_1p_2$ and not of $q$, so the small-error premise of the proof cannot remove it, and at the reported parameters a single error coefficient refutes the identity while satisfying that premise. The centered binomial $B_2$ separates the coefficient laws at total variation distance $3/8$, and at the reported dimension that distance between the induced polynomial laws is exponentially close to one.</description><guid isPermaLink="true">https://eprint.iacr.org/2026/1734</guid><pubDate>Wed, 19 Aug 2026 07:31:16 +0000</pubDate></item><item><title>TEE-Assisted Authenticated MPC for Resource Constrained Edge_Intelligence</title><link>https://eprint.iacr.org/2026/1733</link><description>Paper: 2026/1733
 
 Authors: Puyu Wang, Ruidan, Zhenshen Liu, Ruiqi Yang, Hui Li
 
-Summary: With the growing deployment of secure multi-party computation (MPC) in data-intensive applications, the offline generation and distribution of authenticated multiplication triples has become a key scalability bottleneck. Existing software-only preprocessing protocols, such as MASCOT and LowGear, typically incur substantial interaction and computation costs when the number of participants or the triple demand is large. This paper proposes a trusted execution environment (TEE) server–assisted aggregated offline deployment scheme that moves expensive interactive preprocessing into a remotely attested enclave and distributes participant-specific authenticated triple shares over authenticated-encrypted channels. Conceptually, the enclave serves as a TEE-backed pseudorandom correlation generator (PCG) that outputs authenticated correlated randomness for MPC with one-way delivery. We design an end-to-end workflow covering remote attestation, per-participant session establishment, and encrypted distribution. The proposed protocol applies to both semi-honest and malicious adversaries; we provide a security analysis against malicious adversaries with abort. Experimental results show clear efficiency improvements over MP-SPDZ implementations of MASCOT and LowGear. Specifically, the proposed scheme achieves a generation rate three times that of MASCOT, while exhibiting linear scalability up to 100k participants. Furthermore, by employing a streaming processing strategy, it efficiently supports the generation of up to 10M triples with an amortized time significantly lower than that of purely software-based protocols, enabling practical and highly scalable preprocessing for large-scale heterogeneous MPC deployments.</description><guid isPermaLink="true">https://eprint.iacr.org/2026/1733</guid><pubDate>Wed, 19 Aug 2026 02:06:42 +0000</pubDate></item><item><title>Indifferentiability of Public-Key Encryption: Theory Meets Practice</title><link>https://eprint.iacr.org/2026/1732</link><description>Paper: 2026/1732
+Summary: —Supporting privacy-preserving analytics across large
+Internet of Things (IoT) populations remains difficult. Resource
+constrained devices may be unable to execute expensive multi
+party computation (MPC) preprocessing or remain in a sus
+tained many-party online protocol. We present a remotely at
+tested, trusted execution environment (TEE)-assisted authenti
+cated MPC multiplication scheme for large-scale edge intelli
+gence. The TEE is deliberately restricted to the offline phase:
+before task-time compute committees are selected according to
+current edge availability and resource conditions, an Intel Soft
+ware Guard Extensions (SGX) enclave provisions fine-grained
+authenticated material to authorized edge devices and then leaves
+the computation path. When a task arrives, a smaller set of
+m &lt; n compute committees aggregates the delegated device
+shares, the input owners inject their private data and model
+parameters through preprocessed masks, and the committees per
+form authenticated online multiplication without re-entering the
+TEE. We establish the correctness and authentication invariants
+of the committee-level computation and analyze the remotely
+attested deployment under an explicit TEE trust assumption.
+A hardware-SGX prototype implements the integrated scheme.
+The prototype generates batches of up to 10 million triples; at
+l = 1 million in the evaluated three-recipient configuration, it
+achieves a 12.17× preprocessing speedup over the evaluated MP
+SPDZ MASCOT baseline. A separate stress test packages one
+preprocessing row for 100,000 recipients, and integrated tests
+reject ciphertext and online message-authentication-code (MAC)
+tampering. These results show that our scheme substantially
+improves preprocessing performance over the evaluated software
+only protocol and is well suited to resource-constrained edge
+intelligence deployments, underscoring its strong practical utility.</description><guid isPermaLink="true">https://eprint.iacr.org/2026/1733</guid><pubDate>Wed, 19 Aug 2026 02:06:42 +0000</pubDate></item><item><title>Indifferentiability of Public-Key Encryption: Theory Meets Practice</title><link>https://eprint.iacr.org/2026/1732</link><description>Paper: 2026/1732
 
 Authors: Taiyu Wang, Cong Zhang, Hong-Sheng Zhou, Jiayi Ai, Zhihong Jia, Wenli Wang, Jian Liu, Xin Wang, Li Lin, Kui Ren, Chun Chen
 
