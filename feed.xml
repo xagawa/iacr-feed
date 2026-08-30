@@ -1,5 +1,124 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>IACR ePrint Recent</title><link>https://eprint.iacr.org/</link><description>Mirror feed for Slack</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><language>en</language><lastBuildDate>Sun, 30 Aug 2026 05:17:19 +0000</lastBuildDate><ttl>180</ttl><item><title>HyperSolver: Asymptotically and Concretely Accelerating the Delfs–Galbraith Attack using Isogeny Ladders</title><link>https://eprint.iacr.org/2026/1823</link><description>Paper: 2026/1823
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>IACR ePrint Recent</title><link>https://eprint.iacr.org/</link><description>Mirror feed for Slack</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><language>en</language><lastBuildDate>Sun, 30 Aug 2026 11:49:41 +0000</lastBuildDate><ttl>180</ttl><item><title>On the Fault Injection Security of White-box Ciphers</title><link>https://eprint.iacr.org/2026/1833</link><description>Paper: 2026/1833
+
+Authors: Md Alamgir Alam, Avik Chakraborti, Takanori Isobe, Sajani Kundu, Sayandeep Saha
+
+Summary: White-box security settings assume an extremely powerful adversary having full visibility and control of the software implementation and internal computations.
+Leakage-based attacks extract secret information via a local passive attacker (e.g., malware) and transmit it to a remote server.  
+However, an active adversary, who can perform fault injections in a white box setting, has received limited attention, especially in the symmetric-key setting. 
+In this paper, we initiate a formal study of active data-only adversaries in
+the white-box setting. Such adversaries preserve the control flow of the
+implementation but corrupt a bounded number of key-embedded lookup-table
+entries, enabling precise and repeatable manipulation of table values.
+Unlike leakage-based attacks, which are constrained by the bandwidth and
+existence of firewalls, such fault attacks can operate entirely locally. We focus
+on a data-only tampering adversary that preserves the control flow of the
+white-box implementation, but corrupts a bounded number of key-embedded
+lookup-table entries. 
+Even under this stealth-preserving restriction, the
+adversary can cryptographically weaken the implementation and make faulty
+ciphertexts significantly easier to decrypt. We formalize such an active adversary by defining a new security notion and studying its impact on contemporary table-based white-box implementations.
+Our analyses reveal a structural disparity between two major design paradigms: Feistel-based white-box ciphers appear significantly more vulnerable to fault injection than SPN-based designs.  Finally, we propose a software-based fault detection mechanism that detects fault injections with high probability, strengthening resilience. We provide detailed analysis of the SPN-based cipher WEM (the same analyses also work for other SPN-based ciphers like SPNbox), and two Feistel-based ciphers SPACE and Galaxy. Our analyses reveal that SPACE and Galaxy are significantly more vulnerable than WEM, under our fault-based security setting. Precisely, we show that WEM achieves high security under all the adversarial models, whereas SPACE and Galaxy instances can be attacked with a very high message recovery probability of $2^{-8}$, when the adversary can choose the fault positions and the values and corrupts up to one fourth of the implementation table entries.</description><guid isPermaLink="true">https://eprint.iacr.org/2026/1833</guid><pubDate>Sat, 29 Aug 2026 16:48:09 +0000</pubDate></item><item><title>Universally Composable Hybrid PAKE Secure Against Harvest-Now-Decrypt-Later Attacks</title><link>https://eprint.iacr.org/2026/1832</link><description>Paper: 2026/1832
+
+Authors: Yasmine Vazirinejad, Feng Hao, You Lyu, Shengli Liu
+
+Summary: We present a hybrid password-authenticated key exchange (PAKE) protocol that is secure against harvest-now-decrypt-later (HNDL) attacks by quantum adversaries, and is universally composable under the parallel composition framework of Lyu and Liu (EUROCRYPT 2025). Existing hybrid PAKE constructions combine a classical PAKE with a post-quantum (PQ) PAKE, with the overall security intended to rely on the stronger of the two. However, identifying which PAKE is stronger is non-trivial, given the limited maturity of post-quantum PAKE designs. Recognizing that the immediate quantum threat is passive, we propose a different hybrid compiler: rather than combining two PAKEs, we encapsulate a classical PAKE within a standard post-quantum Key Encapsulation Mechanism (KEM). This modular separation avoids the fragility of post-quantum password handling while neutralizing HNDL attacks. Our compiler works with any two-pass or three-pass PAKEs. As a concrete instantiation, we construct a three-pass protocol that combines J-PAKE and a post-quantum KEM. We also implement the resulting protocol and provide performance results demonstrating that the hybrid construction remains practical, with the complete handshake executing in $2.81\text{ ms}$. This construction has the distinctive advantage that it does not require any ideal cipher, (constant-time) hash-to-curve, or trusted setup assumptions. Within the Lyu-Liu framework, we show that J-PAKE satisfies the notion of a Full DH-type PAKE. We model the KEM as a password-independent Simulatable DH-type component satisfying the minimal simulation properties required for parallel composition. To capture the prospective quantum threat, we formalize a stronger variant of the standard HNDL threat model—where the quantum adversary is explicitly granted the plaintext password—and prove that our protocol achieves Session Key Security and Post-Quantum Forward Secrecy. Our construction relies solely on standardized and widely deployed primitives, yielding a hybrid PAKE that is UC-secure, efficient, and well-suited for real-world deployment during the post-quantum transition.</description><guid isPermaLink="true">https://eprint.iacr.org/2026/1832</guid><pubDate>Sat, 29 Aug 2026 08:53:38 +0000</pubDate></item><item><title>Silent-Share: Decoupling Hidden Threshold Matching from Pairing Operations via Group-Valued Oblivious Key-Value Stores</title><link>https://eprint.iacr.org/2026/1831</link><description>Paper: 2026/1831
+
+Authors: Jie Zhang, Xiaohong Li, Ruitao Feng, Guangdong Bai
+
+Summary: Matchmaking encryption (ME) enables bilateral access control with private policies, but existing pairing-based constructions tie receiver-side authorization cost to the policy size. This is especially problematic when one party holds a large hidden policy while the other holds only a small attribute set.
+
+We present Silent-Share, a bilateral hidden-policy threshold access-control protocol that decouples policy representation from pairing-based authorization. The construction combines a one-sided hidden-threshold policy-based key encapsulation mechanism (PB-KEM) with a sparse group-valued oblivious key-value store (GOKVS). The GOKVS compactly encodes policy-dependent group elements, so a receiver holding attribute set $\mathcal{A}$ performs exactly $2|\mathcal{A}|$ pairings, independent of the policy size $|\mathcal{P}|$ and threshold $d$. Total decapsulation additionally incurs a hidden-threshold reconstruction cost, characterized separately. Two independent one-sided instances are composed and bound with AES-GCM to realize bilateral authorization.
+
+We prove one-sided KEM confidentiality and policy hiding in the random-oracle model under a hidden common exponent assumption, and extend these guarantees to the bilateral composition. Our implementation on BN254 shows that, when the correct $d$-subset is provided, one-sided decapsulation for $|\mathcal{A}|=10$ takes about $394$ ms, dominated by pairing operations. The pairing-based authorization layer remains flat as $|\mathcal{P}|$ grows from $50$ to $800$, confirming the policy-size independence. The hidden-threshold reconstruction cost is reported separately and can dominate when $|\mathcal{A}|$ is large. Encapsulation is approximately $2$--$3\times$ faster than fuzzy matchmaking encryption across the tested parameter range.</description><guid isPermaLink="true">https://eprint.iacr.org/2026/1831</guid><pubDate>Sat, 29 Aug 2026 08:03:59 +0000</pubDate></item><item><title>The Extended Wedge Attack</title><link>https://eprint.iacr.org/2026/1830</link><description>Paper: 2026/1830
+
+Authors: John Baena, Javier Verbel, Luis Villota
+
+Summary: The wedge attack of Ran (EUROCRYPT 2026) recovers the secret oil space of a UOV public key over fields of characteristic two by exploiting the fact that the polar forms of the public map are alternating. It has since been generalized in several directions, each carrying its own algebraic tools, e.g., Jin et al. (PKC 2026). Working directly with the polynomials of an oil and vinegar map, we give a simpler description of the attack, based on a dual decomposition of oil-vinegar polynomials, and we recover the original wedge attack and its odd-characteristic analogue as special cases. This framework leads to a generalization, which we call the extended wedge attack. We identify two explicit conditions on the parameters that guarantee that the attack terminates with the recovery of the secret space. We also prove that the matrix of the extended wedge attack is permutation equivalent to the truncated Macaulay matrix in the attack by Furue-Ikematsu (CRYPTO 2026).</description><guid isPermaLink="true">https://eprint.iacr.org/2026/1830</guid><pubDate>Sat, 29 Aug 2026 06:19:36 +0000</pubDate></item><item><title>Decomposed LWE is Equivalent to Succinct LWE</title><link>https://eprint.iacr.org/2026/1829</link><description>Paper: 2026/1829
+
+Authors: Damiano Abram, Gal Arnon, Valerio Cini, Paul Lou, Giulio Malavolta, Lawrence Roy
+
+Summary: We prove that the Succinct Learning with Errors assumption, introduced by Wee (CRYPTO '24), and the Decomposed Learning with Errors assumption, introduced by Abram, Malavolta, and Roy (CRYPTO '25), are equivalent under appropriate parameter settings. Abram, Malavolta, and Roy proved that Succinct LWE implies Decomposed LWE. We establish the converse implication, showing that Decomposed LWE implies Succinct LWE.</description><guid isPermaLink="true">https://eprint.iacr.org/2026/1829</guid><pubDate>Fri, 28 Aug 2026 20:46:06 +0000</pubDate></item><item><title>WeaveTLS: High-Throughput Cross-Connection ML-DSA Authentication in Mutual TLS</title><link>https://eprint.iacr.org/2026/1828</link><description>Paper: 2026/1828
+
+Authors: Ganqin Liu, Hao Cheng, Jipeng Zhang
+
+Summary: Mutual TLS (mTLS) authenticates both peers and therefore incurs post-quantum
+signature costs on every connection. Concurrent handshakes expose independent
+ML-DSA operations, but executing them jointly is difficult: signing is
+rejection-divergent, verification uses heterogeneous keys, and synchronous TLS
+APIs expose authentication work one connection at a time.
+
+We present WeaveTLS, a wire-transparent architecture that executes
+ML-DSA authentication across concurrent TLS connections. Its primitive
+interface combines rejection-aware slot refill with per-request expanded-key
+handles, supporting both unrelated client keys and shared issuer keys. A
+stackless OpenSSL continuation lets an nginx worker suspend authentication,
+expose work from other connections, and execute compatible operations through
+optimized single-request, four-request, or eight-request AVX-512 kernels without fibers
+or cross-thread handoff. WeaveTLS preserves the TLS authentication
+barrier, certificate validation, and wire protocol.
+
+On an AMD Ryzen 9 9950X3D, WeaveTLS improves one-core nginx mTLS
+throughput by 2.81-4.31$\times$ over OpenSSL's default ML-DSA path and by
+2.19-3.29$\times$ over a synchronous reference-C control in the same provider
+across ML-DSA-44/65/87. At the primitive boundary, expanded-key eight-request
+verification is 1.65-2.23$\times$ faster than matched cached AVX2, and
+rejection-aware refill makes ML-DSA-65 signing 1.90$\times$ faster than
+otherwise identical lockstep scheduling. Cohort publication also weakens
+client-visible rejection timing under load, reducing attempt-count/latency
+correlation to 0.063 at concurrency 16 and 0.008 at 64; singleton execution
+retains the signal.</description><guid isPermaLink="true">https://eprint.iacr.org/2026/1828</guid><pubDate>Fri, 28 Aug 2026 15:26:02 +0000</pubDate></item><item><title>AVXPoS: Reducing Consensus Verification Cost in the Ethereum Proof-of-Stake Client</title><link>https://eprint.iacr.org/2026/1827</link><description>Paper: 2026/1827
+
+Authors: Ganqin Liu, Hao Cheng, Georgios Fotiadis, Jipeng Zhang, Chen Qian
+
+Summary: Ethereum Proof-of-Stake (PoS) clients must verify large volumes of
+Boneh--Lynn--Shacham (BLS) signatures for attestations, sync-committee messages,
+and other consensus-critical objects within fixed slot deadlines. This recurring
+cost competes with state transition, fork choice, and message propagation for
+client CPU time, so reducing it increases the verification headroom available
+under bursty load. Prior cryptographic-engineering work has shown that SIMD can
+substantially accelerate BLS verification kernels, but these gains do not
+automatically survive client software boundaries, runtime scheduling, and
+irregular verification ranges.
+
+We present AVXPoS, a client-aware batching framework for BLS verification in
+the Prysm Ethereum PoS client. AVXPoS treats batched verification as a
+client-level systems problem: it preserves Prysm's verification semantics while
+reorganizing protocol-shaped requests into native batched states that expose
+SIMD parallelism across API, worker, and native-backend boundaries. We
+instantiate AVXPoS with an AVX-512 backend for BLS12-381, combining Go-side
+range formation with C-side width-adaptive dispatch. On a resource-constrained
+two-core Intel host, AVXPoS gains $1.44$--$2.10\times$ over Prysm's production
+\texttt{blst} backend at selected small batch sizes that bracket the
+post-aggregation $p50/p95/p99$ batch-size quantiles of an all-subnets
+steady-state mainnet stress trace,
+and reaches up to $3.18\times$ in controlled capacity sweeps. On a 16-core AMD
+host, a production checkpoint-backfill
+verifier at Ethereum's 128-block request cap improves by $1.81\times$.
+Cross-platform results indicate that the relative speedup depends in part on
+Prysm's worker budget, because worker partitioning determines how much SIMD
+parallelism remains within each native range.</description><guid isPermaLink="true">https://eprint.iacr.org/2026/1827</guid><pubDate>Fri, 28 Aug 2026 15:14:10 +0000</pubDate></item><item><title>Threshold Encryption with Internally Motivated Corruptions</title><link>https://eprint.iacr.org/2026/1826</link><description>Paper: 2026/1826
+
+Authors: Jan Bormet, Hussien Othman, Benedikt Wagner
+
+Summary: In recent years, threshold encryption has gained a lot of interest, particularly due to its potential use in encrypted mempools in blockchains. 
+Standard security models allow the adversary to corrupt parties either statically (i.e., fixed at the onset of the game) or adaptively (i.e., via an oracle one-by-one, depending on keys and ciphertexts).
+
+In this work, we observe that neither of these models captures the case in which a party decides to become corrupted based on secret information. For instance, in an encrypted mempool application with randomly rotating committees, an adversary may set up a smart contract that pays parties who reveal their decryption share, and parties decide whether to claim it based on, say, whether they are on the next committee. Such corruptions are not fixed in advance, but they are also not chosen solely by an external adversary based on public information.
+
+We initiate the formal study of such internally motivated corruptions and partial decryptions. We introduce a security framework in which each party's corruption behavior may depend on its local secret state. That is, on a corruption, the adversary can submit a motivation function and all parties for which this motivation function outputs $1$ (on their secret information) are corrupted. A similar internally motivated behavior is allowed for releasing partial decryptions. 
+We then study threshold encryption under this stronger notion of security. In particular, we show:
+    - Negative Results: We show that for certain classes of motivation functions and number of queries, no threshold encryption scheme can satisfy security. We also show a concrete practical attack with internally motivated corruptions against a scheme that has been proven secure with standard corruptions.
+    - Positive Results: We give two efficient classes of constructions from the (Bilinear) Diffie-Hellman assumptions. The first is secure when partial decryptions on the challenge ciphertext are internally motivated. The second additionally allows internally motivated corruptions.</description><guid isPermaLink="true">https://eprint.iacr.org/2026/1826</guid><pubDate>Fri, 28 Aug 2026 15:04:44 +0000</pubDate></item><item><title>Enhanced Differential-linear Cryptanalysis of Forr\'{o} with MILP</title><link>https://eprint.iacr.org/2026/1825</link><description>Paper: 2026/1825
+
+Authors: Zhengting Li, Lin Ding, Xinhai Wang, Honglei Wang, Jiang Wan, Fan Zhang
+
+Summary: ARX-based design is a major building block of modern cryptographic ciphers due to its efficiency in software. Forr\'{o} is an ARX-based stream cipher proposed by Coutinho et al. at ASIACRYPT 2022, which was designed to provide higher security margin than the ChaCha stream cipher. In this paper, we propose a full automated MILP model called \textit{MinForr\'{o}}, to derive linear approximations for the Forr\'{o} stream cipher. For the differential part, a two-stage strategy to search for single-bit differential trails with high differential correlations is presented, which helps us to find the first-ever 3-round differential trails for Forr\'{o}. By combining the linear approximations obtained by \textit{MinForr\'{o}} and 3-round differential trail for Forr\'{o}, we propose improved differential-linear distinguishers for 4-, 5-, 5.25-, 5.5-, 5.75-, 6-, 6.25- and 6.5-round Forr\'{o} with complexities ${2^{32.44}}$, ${2^{46}}$, ${2^{50}}$, ${2^{64.32}}$, ${2^{87.12}}$, ${2^{117.92}}$, ${2^{174.92}}$ and ${2^{226.88}}$, respectively. The proposed differential-linear distinguishers for 4-, 5-, 5.25- and 5.5-round Forr\'{o} significantly improve the existing distinguishers by factors of ${2^{4.11}}$, ${2^{83.68}}$, ${2^{127.64}}$ and ${2^{178.20}}$, respectively. To the best of our knowledge, this is the first differential-linear distinguisher for Forr\'{o} that reaches 6.5 rounds, which is a significant advancement over the existing record of 5.5 rounds. We have implemented the differential-linear distinguishers for 4- and 5-round Forr\'{o} on a common PC, and the experimental
+results confirm the correctness of these distinguishers. Furthermore, when combined with the \textit{Probabilistic Neutral Bits} (PNB) technique, we obtain key recovery attacks on 5.5-, 6-, 6.5- and 6.75-round Forr\'{o} with time complexities ${2^{149.20}}$, ${2^{151.84}}$, ${2^{213.49}}$ and ${2^{251.97}}$, respectively. The proposed key recovery attack on 5.5-round Forr\'{o} significantly improves the time complexity of the existing attack by a factor of ${2^{75.84}}$. To the best of our knowledge, this is the first key recovery attack on Forr\'{o} that reaches 6.75 rounds, which is a significant advancement over the existing record of 5.5 rounds.</description><guid isPermaLink="true">https://eprint.iacr.org/2026/1825</guid><pubDate>Fri, 28 Aug 2026 14:17:31 +0000</pubDate></item><item><title>Comparing Privacy-Preserving Revocation for the EUDI Wallet</title><link>https://eprint.iacr.org/2026/1824</link><description>Paper: 2026/1824
+
+Authors: Andrea Flamini, Anja Lehmann, Giada Sciarretta, Mario Scuro, Nicola Smaniotto, Alessandro Tomasi, Silvio Ranise
+
+Summary: The European Digital Identity Wallet has integrated anonymous credentials into its technical specifications, and singles out four constructions for privacy-preserving revocation, drawn from two  families: positive dynamic accumulators and signed-pairs. The two families are described in the literature in substantially different terms, and no common basis for comparing them exists, which currently prevents informed and quantitative decision making. In this work, we give a unified treatment of both families, showing that signed-pairs, despite their very different presentation, can be expressed in the standard accumulator syntax. We use this to define a single revocation mechanism that any of the four constructions instantiates, which in turn allows us to compare the resulting mechanisms both at the protocol level and empirically. We measure the performance of all four across the full credential lifecycle, on server-class hardware for the Status Manager and on a smartphone for the Holder and Verifier, with parameters taken from a live national eID scheme. No construction dominates in every aspect, and we make the resulting trade-offs explicit, showing which construction suits which deployment, and identify promising avenues for further improvement at the protocol level.</description><guid isPermaLink="true">https://eprint.iacr.org/2026/1824</guid><pubDate>Fri, 28 Aug 2026 09:53:36 +0000</pubDate></item><item><title>HyperSolver: Asymptotically and Concretely Accelerating the Delfs–Galbraith Attack using Isogeny Ladders</title><link>https://eprint.iacr.org/2026/1823</link><description>Paper: 2026/1823
 
 Authors: Lorenz Panny, Ryan Rueger, Alessandro Sferlazza, Aleksei Udovenko
 
@@ -760,97 +879,4 @@ Authors: Lukasz Olejnik, Bartosz Naskrecki
 
 Summary: We show that the CRT-FHE scheme of Pradhan et al. is insecure for laws within its assumed error distribution range. The secret key follows from the public key by a single ring inversion whenever the public multiplier is a unit. The plaintext is recovered from any ciphertext under such a law without the secret key, for every multiplier, giving chosen-plaintext advantage $1/2$. We further show that the transformation from ordinary Ring-LWE to CRT-RLWE does not preserve the error distribution, so it does not establish that CRT-RLWE is at least as hard as Ring-LWE.
 
-One mechanism underlies both. The Chinese remainder theorem (CRT) function is reduced modulo $p_1p_2$ while its output is used modulo a coprime modulus $q$, so under every zero-preserving section an error in $p_2\mathcal{R}$ encodes to zero. The law $p_2B_1$ is so confined, meets the stated conditions, and decrypts correctly. Confinement is not a weakness of scale: scaling any baseline law by $p_2$ leaves its ordinary Ring-LWE problem exactly equivalent, while the reduced encoder destroys every error it produces. The reduction discrepancy is a multiple of $p_1p_2$ and not of $q$, so the small-error premise of the proof cannot remove it, and at the reported parameters a single error coefficient refutes the identity while satisfying that premise. The centered binomial $B_2$ separates the coefficient laws at total variation distance $3/8$, and at the reported dimension that distance between the induced polynomial laws is exponentially close to one.</description><guid isPermaLink="true">https://eprint.iacr.org/2026/1734</guid><pubDate>Wed, 19 Aug 2026 07:31:16 +0000</pubDate></item><item><title>TEE-Assisted Authenticated MPC for Resource Constrained Edge_Intelligence</title><link>https://eprint.iacr.org/2026/1733</link><description>Paper: 2026/1733
-
-Authors: Puyu Wang, Ruidan, Zhenshen Liu, Ruiqi Yang, Hui Li
-
-Summary: —Supporting privacy-preserving analytics across large
-Internet of Things (IoT) populations remains difficult. Resource
-constrained devices may be unable to execute expensive multi
-party computation (MPC) preprocessing or remain in a sus
-tained many-party online protocol. We present a remotely at
-tested, trusted execution environment (TEE)-assisted authenti
-cated MPC multiplication scheme for large-scale edge intelli
-gence. The TEE is deliberately restricted to the offline phase:
-before task-time compute committees are selected according to
-current edge availability and resource conditions, an Intel Soft
-ware Guard Extensions (SGX) enclave provisions fine-grained
-authenticated material to authorized edge devices and then leaves
-the computation path. When a task arrives, a smaller set of
-m &lt; n compute committees aggregates the delegated device
-shares, the input owners inject their private data and model
-parameters through preprocessed masks, and the committees per
-form authenticated online multiplication without re-entering the
-TEE. We establish the correctness and authentication invariants
-of the committee-level computation and analyze the remotely
-attested deployment under an explicit TEE trust assumption.
-A hardware-SGX prototype implements the integrated scheme.
-The prototype generates batches of up to 10 million triples; at
-l = 1 million in the evaluated three-recipient configuration, it
-achieves a 12.17× preprocessing speedup over the evaluated MP
-SPDZ MASCOT baseline. A separate stress test packages one
-preprocessing row for 100,000 recipients, and integrated tests
-reject ciphertext and online message-authentication-code (MAC)
-tampering. These results show that our scheme substantially
-improves preprocessing performance over the evaluated software
-only protocol and is well suited to resource-constrained edge
-intelligence deployments, underscoring its strong practical utility.</description><guid isPermaLink="true">https://eprint.iacr.org/2026/1733</guid><pubDate>Wed, 19 Aug 2026 02:06:42 +0000</pubDate></item><item><title>Indifferentiability of Public-Key Encryption: Theory Meets Practice</title><link>https://eprint.iacr.org/2026/1732</link><description>Paper: 2026/1732
-
-Authors: Taiyu Wang, Cong Zhang, Hong-Sheng Zhou, Jiayi Ai, Zhihong Jia, Wenli Wang, Jian Liu, Xin Wang, Li Lin, Kui Ren, Chun Chen
-
-Summary: Public-key encryption (PKE) is a fundamental primitive in modern cryptography, and many PKE schemes have been standardized and widely deployed. To reason about security in complex and highly compositional environments, Zhandry and Zhang (CRYPTO 2020) initiated the study of indifferentiability for public-key cryptosystems. However, their construction for PKE departs substantially from the design paradigms used in practice, and to date no practical public-key encryption schemes are known to achieve indifferentiability.
-
-In this work, we further investigate indifferentiability for public-key encryption, asking whether it can be achieved for practical, standardized schemes. We provide evidence that the answer is yes: slightly augmented standardized group-based encryption schemes can indeed achieve provable indifferentiability. Our contributions are threefold:
-
--- Identifying a barrier in the existing ideal PKE model: We revisit the ideal PKE definition of Zhandry and Zhang and identify an artificial requirement---namely, pseudorandom public keys and ciphertexts---that constitutes an inherent barrier to achieving indifferentiability from groups.
-
--- Redefining the idealized model for PKE: We propose a revised ideal PKE model that removes this pseudorandomness requirement, thereby opening the possibility of achieving indifferentiable public-key encryption from practical group-based schemes.
-    
---Making standardized PKE indifferentiable: We consider two public-key encryption schemes standardized in ISO/IEC 18033-2---Elliptic Curve Integrated Encryption Scheme (ECIES) and Public-Key Secure Encryption (PSEC)---and show that, under slight augmentation, both are indifferentiable from our revised ideal PKE.
-
-In conclusion, our work advances the development of indifferentiable yet practical public-key encryption schemes, enabling future research and protocol design to build on standard PKE schemes while enjoying strong composability guarantees.</description><guid isPermaLink="true">https://eprint.iacr.org/2026/1732</guid><pubDate>Wed, 19 Aug 2026 01:45:05 +0000</pubDate></item><item><title>Generic Ring-Signature Transforms for Fiat-Shamir with Aborts and Hash-and-Sign with Retry</title><link>https://eprint.iacr.org/2026/1731</link><description>Paper: 2026/1731
-
-Authors: Haruhisa Kosuge, Koutarou Suzuki
-
-Summary: Ring signatures provide signer anonymity for ad hoc sets of public keys. Generic Abe-Ohkubo-Suzuki (AOS) transforms are well understood for plain Fiat--Shamir and hash-and-sign signatures, but not for their rejection-sampling variants: Fiat--Shamir with aborts (FSwA) and hash-and-sign with retry (HSwR). We formalize AOS ring transforms for FSwA and HSwR and analyze their security in the quantum random-oracle model. For unforgeability, we reduce security under adaptive ring-signing queries to security without signing queries using essentially the same assumptions as in security proofs for the corresponding ordinary signatures; handling adaptive corruption additionally requires the simulation property to remain valid after key exposure. Strong unforgeability additionally requires response uniqueness and special soundness for FSwA, or second-preimage resistance and non-invertibility for HSwR. The residual no-signing-query requirement admits generic reductions, but with loss exponential in the number of honest keys. Finally, an ML-DSA case study shows that augmented public keys achieve the required key-exposure simulation while identifying its limitations; we also identify conditions for candidate HSwR instantiations.</description><guid isPermaLink="true">https://eprint.iacr.org/2026/1731</guid><pubDate>Wed, 19 Aug 2026 00:50:10 +0000</pubDate></item><item><title>New Techniques for Fast and Shallow FHE Bootstrapping and Beyond</title><link>https://eprint.iacr.org/2026/1730</link><description>Paper: 2026/1730
-
-Authors: Aayush Jain, Huijia Lin, Zeyu Liu, Sagnik Saha
-
-Summary: The main barrier to practical fully homomorphic encryption remains the latency and cost of bootstrapping, the ciphertext refresh step that enables unbounded computation. 
-We design new methods that reduce both the latency and the circuit depth of bootstrapping in the FHEW/TFHE framework, which represents the state-of-the-art for lightweight bootstrapping and for computing deep and unstructured Boolean functions over encrypted data.
-
-
-Our first contribution leverages LWE with a sparse small-norm secret, an assumption known to be equivalent to standard LWE and already widely used in FHE constructions. 
-For an LWE secret of dimension $n$ and Hamming weight $h$, we obtain bootstrapping procedures whose arithmetic complexity decreases from $\tilde O(n^2)$ to $\tilde O(n h)$ $\mathbb{Z}_q$ multiplications while preserving the same asymptotic number of additions. Concretely, this yields a $4.5$--$7.5\times$ practical speedup for gate and functional bootstrapping over the state-of-the-art OpenFHE implementation.
-
-Our second contribution introduces a new RLWE variant with structured secrets, called \emph{\mainrlwevarianttext}, and uses it to significantly reduce the circuit depth of FHEW/TFHE bootstrapping via a new relinearization-free BV multiplication technique. 
-In concrete parameter settings, this reduces the number of sequential NTT/INTT layers required for bootstrapping to just 3, compared to more than 500 in standard FHEW/TFHE, while keeping the overall number of unit 32 or 64-bit word operations comparable to standard FHEW/TFHE bootstrapping. 
-This substantial depth reduction suggests the potential for significantly lower bootstrapping latency on parallel, high-throughput architectures such as GPUs.
-
-Finally, we analyze the security of the new RLWE assumption underlying our depth reduction, including worst-case-to-average-case and search-to-decision reductions, as well as evaluations against concrete attacks.</description><guid isPermaLink="true">https://eprint.iacr.org/2026/1730</guid><pubDate>Tue, 18 Aug 2026 22:01:19 +0000</pubDate></item><item><title>A Unified Framework for Contract-Validated Benchmarking of Zero-Knowledge Proving Systems</title><link>https://eprint.iacr.org/2026/1729</link><description>Paper: 2026/1729
-
-Authors: Matej Hulek, Martin Peresini, Ivan Homoliak
-
-Summary: Zero-knowledge proofs are an operational infrastructure for rollups, private payments, verifiable execution, and zkVM applications. We treat them as succinct proofs of validity whose privacy properties depend on the system and the mode of use. Published benchmarks often compare different workloads, proof modes, and hardware paths, which makes their results hard to interpret. This work presents a unified host-agent framework for benchmarking heterogeneous proving systems under a common execution and reporting method. Each prover runs in an isolated containerized agent and is selected through a scheme-adapter layer. The agent reports canonical JSON artifacts linked to a hashed run manifest and workload-specific semantic contracts. The host checks the public semantic fields and the agent's verification flag to ensure backends are compared on the same declared public claim, even when their circuits, traces, or guest pipelines differ. We evaluate circuit-based, transparent, GPU-accelerated, folding, and zkVM systems: Groth16, ICICLE, Halo2, Plonky3, Winterfell, Nova, RISC Zero with CUDA and Groth16 wrapping, and SP1 with and without AVX. The suite uses six primary workloads with comparable semantics, together with secondary hash workloads that expose specialization. No prover family dominates all deployment criteria. At 8 CPU cores, Plonky3 and Winterfell have the smallest across-case proving-time and RAM figures. Groth16 and ICICLE produce sub-kilobyte proofs. Winterfell has the lowest host verification time. zkVM systems trade larger proofs and higher memory for programmability. On the Merkle-path micro-benchmark, pairing artifacts remain sub-kilobyte, whereas wrapping a zkVM receipt yields a Groth16-sized artifact at a high proving cost. GPU acceleration helps most after fixed setup costs are amortized. The main contribution is methodological: validate the statement being proved, disclose the security profile, and report resource limits in addition to proving time.</description><guid isPermaLink="true">https://eprint.iacr.org/2026/1729</guid><pubDate>Tue, 18 Aug 2026 19:59:11 +0000</pubDate></item><item><title>A Controlled Case Study of Design Trade-offs in DeFi Lending Protocols</title><link>https://eprint.iacr.org/2026/1728</link><description>Paper: 2026/1728
-
-Authors: Jan Findra, Zdenek Lapes, Ivan Homoliak
-
-Summary: Decentralized lending protocols encode credit markets as smart contracts whose design choices affect gas cost, capital efficiency, liquidation behavior, and risk allocation. We compare Aave V3, SparkLend, Compound III, and Morpho Blue in matched Ethereum fork tests with wstETH collateral, USDC debt, and one fixed chain state. The tests measure call-path gas, annualized rates, thirty-day debt growth, maximum borrow capacity, and liquidation outcomes. It is important to note that the observed orderings for gas costs and rates are specific to this test artifact and could change under different collateral assets or utilization regimes. Within this setting, Morpho Blue has the lowest measured interaction call-path gas and highest borrow capacity, while shifting risk selection to isolated permissionless markets. Furthermore, Morpho Blue's evaluation uses a deployed market for rate measurements but a constructed market for liquidation testing. Aave V3 and SparkLend provide broader pooled-market abstractions with higher measured call-path gas. Compound III simplifies borrowing around one base asset per market; its low-gas absorb step is offset by a separate buy collateral liquidation path. We provide a Foundry-based Ethereum-fork test suite for reproducing these measurements and comparing lending-design trade-offs.</description><guid isPermaLink="true">https://eprint.iacr.org/2026/1728</guid><pubDate>Tue, 18 Aug 2026 19:26:01 +0000</pubDate></item><item><title>Enhancing Capital Efficiency in DeFi Lending and Liquidity Provision</title><link>https://eprint.iacr.org/2026/1727</link><description>Paper: 2026/1727
-
-Authors: Adam Smehyl, Ivan Homoliak
-
-Summary: Decentralized Finance (DeFi) continues to experience rapid growth, yet a significant portion of capital remains inefficiently utilized in overprovisioned lending reserves or inactive liquidity positions. This paper presents two extension-based improvement proposals aimed at increasing capital efficiency in DeFi protocols. The first addresses idle capital in pool-based lending by adding an allocation layer that can deploy otherwise unused liquidity into external yield-generating strategies. The second targets inactive concentrated-liquidity positions through a position-management layer that automates range migration. Both proposals are examined in terms of motivation, mechanism design, expected effects, implementation approach, and practical limitations. Evaluation results are proposal-specific: the lending analysis indicates meaningful supplier-yield uplift under selected external-yield assumptions, while the range-migration analysis focuses on active-time sensitivity and execution cost. Prototype benchmarks suggest that both mechanisms can be implemented as modular extensions, but also expose additional gas overhead and proposal-specific risks, including external-strategy dependence, recall and loss-allocation concerns, and range-policy misconfiguration.</description><guid isPermaLink="true">https://eprint.iacr.org/2026/1727</guid><pubDate>Tue, 18 Aug 2026 18:29:51 +0000</pubDate></item><item><title>Jacobi Signatures, Revisited</title><link>https://eprint.iacr.org/2026/1726</link><description>Paper: 2026/1726
-
-Authors: Yansong Feng
-
-Summary: We remove the Boneh--Lipton conjecture from the proof of Corrigan-Gibbs and Wu (CRYPTO~2024) that Jacobi signatures modulo $N=p^2q$ are one-way. This relates the one-wayness of the pseudorandom generator proposed by Damg{\aa}rd in 1988 to a standard number-theoretic problem alone.</description><guid isPermaLink="true">https://eprint.iacr.org/2026/1726</guid><pubDate>Tue, 18 Aug 2026 17:42:28 +0000</pubDate></item><item><title>Proof-of-Uniqueness: Sybil-Resistant Privacy-Preserving Decentralized Identity through Threshold-OPRF and zk-SNARK Registry</title><link>https://eprint.iacr.org/2026/1725</link><description>Paper: 2026/1725
-
-Authors: Adam Vozda, Martin Peresini, Juraj Mariani, Ivan Homoliak
-
-Summary: Several decentralized applications and blockchains, such as blockchain-based voting systems or Proof-of-Social-Capital, require a strict one-account-per-person policy, yet public identity records often expose sensitive attributes or enable offline attribution. This work presents a Proof-of-Uniqueness blockchain-based registry that composes an issuer-signed verifiable credential, two zero-knowledge proofs, a threshold verifiable oblivious pseudorandom function (vOPRF), and a smart contract. The first proof authorizes a blinded evaluation of an issuer's certified canonical identifier, and the second validates the OPRF transcript and binds the resulting global nullifier to a wallet. The design further binds issuer authorization, credential status, validity bounds, canonical encoding, and replay state. Its person-level guarantee is conditional on a stable injective identifier within a coordinated issuance namespace and a stable, valid OPRF key. Confidentiality holds against public observers and against fewer than the OPRF threshold of nodes, but not against an issuer that actively probes its own identifiers. Our prototype couples Noir and UltraPlonk circuits, three local threshold OPRF nodes, and a Solidity contract. For one fixed-schema credential input, it derives a single wallet-bound deterministic nullifier, verifies a real 2,144-byte proof on-chain, and rejects a repeated nullifier with $O(1)$ lookups. One real enrollment consumes 615k gas, and proof construction takes about 65 seconds on one desktop software thread.</description><guid isPermaLink="true">https://eprint.iacr.org/2026/1725</guid><pubDate>Tue, 18 Aug 2026 17:29:03 +0000</pubDate></item><item><title>Data-Dependent Memory-Hard Functions: Sustained Space and Cumulative Complexity Trade-offs in the Parallel Random Oracle Model</title><link>https://eprint.iacr.org/2026/1724</link><description>Paper: 2026/1724
-
-Authors: Jeremiah Blocki, Blake Holman
-
-Summary: Memory-Hard Functions (MHFs) are a cryptographic primitive designed to protect passwords and other low-entropy secrets against brute-force attacks. The strongest and most natural formalization of memory-hardness is sustained space complexity (SSC), which measures how long an attacker's memory remains above a given threshold. Ideally, one would like to ensure that any parallel attacker must sustain $\Theta(N)$ memory for $\Theta(N)$ steps, while the function can also be computed in sequential time $\Theta(N)$. Unfortunately, this goal is impossible to achieve. Thus, the appropriate objective is to establish strong tradeoffs between sustained space complexity and cumulative memory complexity (CMC), another strong notion of memory hardness. Blocki and Holman (CRYPTO 2022) achieved strong SSC/CMC tradeoffs in the dynamic pebbling model, but their construction relied on expensive combinatorial graphs, and the pebbling abstraction does not rule out more efficient attacks in the stronger Parallel Random Oracle Model (PROM).
-
-We address both limitations. We construct a new data-dependent MHF (dMHF), DEGSample, and prove the first SSC/CMC tradeoff for dMHFs directly in the PROM. In the dynamic pebbling model, DEGSample achieves the same ideal tradeoff as prior work: any dynamic pebbling strategy either sustains $\Omega(N)$ memory for $\Omega(N)$ steps or incurs a maximal CMC penalty $\Omega(N^{3-\epsilon})$. In the PROM, we prove that any attacker either sustains $\Omega(N)$ memory for $\Omega(N)$ steps or incurs a steep CMC penalty of at least $\Omega(N^{2.5-\epsilon})$. To prove this, we introduce a new graph property called ancestral robustness and show that, together with another property called fractional depth-robustness, it suffices to obtain strong PROM tradeoffs via a natural dynamization procedure to turn the graph into a dMHF. The PROM lower bound combines a time-space trade-off argument with an extraction procedure that converts any PROM execution into a cost-equivalent pebbling of the realized graph.</description><guid isPermaLink="true">https://eprint.iacr.org/2026/1724</guid><pubDate>Tue, 18 Aug 2026 17:21:20 +0000</pubDate></item></channel></rss>
+One mechanism underlies both. The Chinese remainder theorem (CRT) function is reduced modulo $p_1p_2$ while its output is used modulo a coprime modulus $q$, so under every zero-preserving section an error in $p_2\mathcal{R}$ encodes to zero. The law $p_2B_1$ is so confined, meets the stated conditions, and decrypts correctly. Confinement is not a weakness of scale: scaling any baseline law by $p_2$ leaves its ordinary Ring-LWE problem exactly equivalent, while the reduced encoder destroys every error it produces. The reduction discrepancy is a multiple of $p_1p_2$ and not of $q$, so the small-error premise of the proof cannot remove it, and at the reported parameters a single error coefficient refutes the identity while satisfying that premise. The centered binomial $B_2$ separates the coefficient laws at total variation distance $3/8$, and at the reported dimension that distance between the induced polynomial laws is exponentially close to one.</description><guid isPermaLink="true">https://eprint.iacr.org/2026/1734</guid><pubDate>Wed, 19 Aug 2026 07:31:16 +0000</pubDate></item></channel></rss>
