@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>IACR ePrint Recent</title><link>https://eprint.iacr.org/</link><description>Mirror feed for Slack</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><language>en</language><lastBuildDate>Wed, 02 Sep 2026 16:30:18 +0000</lastBuildDate><ttl>180</ttl><item><title>Covert Federated Learning under Regulation based on Threshold Anamorphic Encryption</title><link>https://eprint.iacr.org/2026/1846</link><description>Paper: 2026/1846
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>IACR ePrint Recent</title><link>https://eprint.iacr.org/</link><description>Mirror feed for Slack</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><language>en</language><lastBuildDate>Wed, 02 Sep 2026 20:58:21 +0000</lastBuildDate><ttl>180</ttl><item><title>Covert Federated Learning under Regulation based on Threshold Anamorphic Encryption</title><link>https://eprint.iacr.org/2026/1846</link><description>Paper: 2026/1846
 
 Authors: Wenxuan Xu, Huaqun Wang, Debiao He
 
@@ -45,12 +45,31 @@ For a Cyclo-compatible instantiation, this changes the concrete extraction regim
 
 Authors: Xuan Shen, Zhihao Li, Ruida Wang, Xianhui Lu
 
-Summary: Arithmetic logic unit (ALU) can combine word-level arithmetic with bit-level logic on encrypted machine words. Triangle encoding provides a CKKS-based representation for leveled word arithmetic, but its existing arithmetic-to-Boolean (A2B) conversion recovers only one window per bootstrapping. Consequently, converting an \(\ell\)-bit message requires \(\Theta(\ell)\) sequential functional-bootstrapping on the critical path of each input ciphertext.
+Summary: Arithmetic logic unit (ALU) can combine word-level arithmetic
+with bit-level logic on encrypted machine words. Triangle encoding provides
+a CKKS-based representation for leveled word arithmetic, but its existing
+arithmetic-to-Boolean (A2B) conversion recovers only one window
+per bootstrapping. Consequently, converting an \(\ell\)-bit message requires
+\(\Theta(\ell)\) sequential functional-bootstrapping on the critical
+path of each input ciphertext.
 
 
-We first extend Triangle encoding from binary to general digit bases, allowing a larger base to shorten each Triangle word and increase the number of packed words per ciphertext. We then introduce shared overflow cancellation. For block modulus \(B=d^\omega\) and bounded overflow \(\lvert I_k\rvert&lt;B/2\), a period-\(B\) functional bootstrap evaluates the remainders at all selected boundaries simultaneously, while the corresponding quotients are recovered by affine arithmetic. At consecutive boundaries, the current remainder and the preceding quotient contain the same shifted overflow coefficient. Their difference cancels this coefficient exactly and yields \(v_i=D_i+c_{i-1}-Bc_i,\) which contains only the block value \(D_i\) and its adjacent carry bits. All such values are available before any carry is resolved. The sign of this value determines carry behaviors, which obtained by functional bootstrapping. The corresponding transfer rules compose associatively, thus parallel carry propagation resolves all carries with \(O(\lceil\log_2 \ell \rceil)\) leveled multiplication depth. After carry correction, a final multi-value functional bootstrap extracts the bits of all blocks in parallel. The resulting A2B conversion has three sequential functional bootstrap stages per input ciphertext, independent of \(\ell\), and requires no cross ciphertext batching.
+We first extend triangle encoding from binary to general digit bases, allowing a larger base to shorten each Triangle word and increase the number of packed words per ciphertext. We then introduce shared-overflow cancellation. For overflow bound \(\lVert I\rVert_\infty&lt;B/2\) and window radix \(D=d^\omega\geq B\), a period-\(D\) functional bootstrap evaluates the remainders at all selected positions simultaneously, while the corresponding quotients are recovered by affine arithmetic. At consecutive selected positions, the current remainder and the preceding quotient contain the same shifted overflow coefficient. Their difference cancels this coefficient exactly and yields
+\(
+v_i=D_i+c_{i-1}-Dc_i,
+\)
+which contains only the window value \(D_i\) and its adjacent carry bits. All such values are available before any carry is resolved. A second multi-value functional bootstrap jointly obtains the carry behavior and the bits of the value reduced modulo \(D\). The corresponding transfer rules compose
+associatively, thus parallel carry propagation resolves all carries with
+\(O(\lceil\log_2 \ell \rceil)\) leveled multiplication depth. After carry propagation, a leveled controlled decrement corrects the extracted bits. The optimized A2B conversion therefore has two sequential functional-bootstrap stages per input ciphertext, independent of \(\ell\), and requires no cross-ciphertext batching.
 
-We implement the proposed A2B conversion in OpenFHE and evaluate it for 64-, 128-, and 256-bit words. In a same-machine, single-threaded comparison with Gao--Zheng, base \(d=2\) achieves the lowest single ciphertext latency, yielding \(2.55\times\)--\(6.25\times\) speedups. Base \(d=4\) packs more words into each ciphertext and achieves the best amortized performance, yielding \(4.00\times\)--\(8.71\times\) speedups.</description><guid isPermaLink="true">https://eprint.iacr.org/2026/1840</guid><pubDate>Mon, 31 Aug 2026 02:58:40 +0000</pubDate></item><item><title>Quasar: A Field-Agnostic Polynomial Commitment Scheme with Polylogarithmic Verification from Quasi-Abelian Codes</title><link>https://eprint.iacr.org/2026/1839</link><description>Paper: 2026/1839
+We implement the proposed A2B conversion in OpenFHE for 64-, 128-, and
+256-bit words. The full benchmark of the optimized version is not yet
+complete. Preliminary measurements indicate that the two-bootstrap path is
+approximately \(1.3\times\) faster than our measured three-bootstrap
+implementation. Applying this factor to the existing same-machine results
+gives estimated latency speedups of \(3.32\times\)--\(8.12\times\) and
+estimated amortized speedups of \(5.20\times\)--\(11.32\times\) over
+Gao--Zheng. These estimates will be replaced by complete measurements.</description><guid isPermaLink="true">https://eprint.iacr.org/2026/1840</guid><pubDate>Mon, 31 Aug 2026 02:58:40 +0000</pubDate></item><item><title>Quasar: A Field-Agnostic Polynomial Commitment Scheme with Polylogarithmic Verification from Quasi-Abelian Codes</title><link>https://eprint.iacr.org/2026/1839</link><description>Paper: 2026/1839
 
 Authors: Yuhao Jia, Zhe Li, Chaoping Xing, Yizhou Yao, Chen Yuan
 
@@ -859,4 +878,4 @@ read a repository cannot repack it.</description><guid isPermaLink="true">https:
 
 Authors: Kirill Vedenev
 
-Summary: Ghoshal, Ishai, Jain, and Sun recently introduced a novel quasipolynomial-time distinguisher for GRS subcodes (including Goppa codes), leaving key recovery as an open problem. This note presents an approach for turning the distinguisher into a full key-recovery attack. The overall complexity is dominated by a few executions of the distinguisher, and the approach is experimentally validated on Goppa codes over $\mathbb{F}_4$. We conjecture that this recovery route applies to binary Goppa codes as well.</description><guid isPermaLink="true">https://eprint.iacr.org/2026/1747</guid><pubDate>Thu, 20 Aug 2026 12:11:00 +0000</pubDate></item></channel></rss>
+Summary: The McEliece cryptosystem based on binary Goppa codes is the oldest public-key scheme to have resisted both classical and quantum cryptanalysis. Ghoshal, Ishai, Jain, and Sun recently gave a quasipolynomial-time distinguisher for Goppa codes. We derive two key-recovery attacks from it, both using derivative spaces of the hidden curve. The first attack recovers high-order derivative spaces at a few positions, guesses the partial GRS support at those positions, and tests whether the guessed partial support admits a compatible curve. Once the partial support is found, the attack recovers the remaining support elements point-by-point via linear algebra. The second attack relies on order-1 derivative spaces and builds from them a tangent minor code - a special auxiliary code - which turns out to be a full GRS code with the same GRS support. This support can then be extracted by the standard Sidelnikov-Shestakov attack. Both attacks were verified end-to-end over $\mathbb{F}_4$. For binary Goppa codes, derivative flag recovery remains out of computational reach, but the other components have supporting evidence. Concurrently, a later revision of the work of Ghoshal et al. gave an independent key recovery based on different ideas.</description><guid isPermaLink="true">https://eprint.iacr.org/2026/1747</guid><pubDate>Thu, 20 Aug 2026 12:11:00 +0000</pubDate></item></channel></rss>
