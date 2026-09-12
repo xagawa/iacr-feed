@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>IACR ePrint Recent</title><link>https://eprint.iacr.org/</link><description>Mirror feed for Slack</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><language>en</language><lastBuildDate>Fri, 11 Sep 2026 23:12:17 +0000</lastBuildDate><ttl>180</ttl><item><title>Security Properties of Iterated Random Functions</title><link>https://eprint.iacr.org/2026/1923</link><description>Paper: 2026/1923
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>IACR ePrint Recent</title><link>https://eprint.iacr.org/</link><description>Mirror feed for Slack</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><language>en</language><lastBuildDate>Sat, 12 Sep 2026 04:26:53 +0000</lastBuildDate><ttl>180</ttl><item><title>Security Properties of Iterated Random Functions</title><link>https://eprint.iacr.org/2026/1923</link><description>Paper: 2026/1923
 
 Authors: Xiaoqi Duan, Kristina Hostáková
 
@@ -405,7 +405,7 @@ The speedups increase to $17.47\sim27.24\times$ and $25.35\sim35.63\times$ in th
 For RSA-1024 and RSA-2048, our arbitrary-modulus multiplication achieves $4.25\times$ and $7.58\times$ lower latency and $16.74\times$ and $29.85\times$ lower amortized time than CPL26's ExactMult, respectively.
 For 64-, 128-, and 256-bit messages, our A2B conversion is $3.75\times$, $6.40\times$, and $14.17\times$ faster than GZ26, respectively.</description><guid isPermaLink="true">https://eprint.iacr.org/2026/1869</guid><pubDate>Wed, 02 Sep 2026 16:05:45 +0000</pubDate></item><item><title>Zero-Knowledge PCPs of Quasilinear Size via Locally Simulatable Sheaf Codes</title><link>https://eprint.iacr.org/2026/1868</link><description>Paper: 2026/1868
 
-Authors: Tom Gur, Nicholas Spooner, Hadas Zeilberger
+Authors: Hadas Zeilberger, Jack O'Connor, Tom Gur, Nicholas Spooner
 
 Summary: We show that for every polynomial $T,b \colon \mathbb{N} \to \mathbb{N}$, there exist an $O(1)$-query probabilistically checkable proof (PCP) for $\operatorname{NTIME}(T)$ of length $\widetilde{O}\bigl(T(n)+b(n)^2\bigr)$, which is $b(n)$-query perfect zero knowledge. This strictly improves on the polynomial-length zero-knowledge PCPs of Gur, O'Connor, and Spooner (STOC 2024; STOC 2025). Our construction builds on the PCPs of Ben-Sasson and Sudan (SICOMP 2008) and Dinur (JACM 2007). We prove the zero-knowledge property of our PCPs via the new machinery of locally simulatable sheaf codes.</description><guid isPermaLink="true">https://eprint.iacr.org/2026/1868</guid><pubDate>Wed, 02 Sep 2026 14:43:12 +0000</pubDate></item><item><title>A Simple Compiler for CCA2-Secure Pseudorandom Codes in the Standard Model</title><link>https://eprint.iacr.org/2026/1867</link><description>Paper: 2026/1867
 
