@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>IACR ePrint Recent</title><link>https://eprint.iacr.org/</link><description>Mirror feed for Slack</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><language>en</language><lastBuildDate>Sun, 13 Sep 2026 23:05:58 +0000</lastBuildDate><ttl>180</ttl><item><title>Akita: A High-Performance Lattice-Based Polynomial Commitment Scheme</title><link>https://eprint.iacr.org/2026/1983</link><description>Paper: 2026/1983
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>IACR ePrint Recent</title><link>https://eprint.iacr.org/</link><description>Mirror feed for Slack</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><language>en</language><lastBuildDate>Mon, 14 Sep 2026 04:47:38 +0000</lastBuildDate><ttl>180</ttl><item><title>Akita: A High-Performance Lattice-Based Polynomial Commitment Scheme</title><link>https://eprint.iacr.org/2026/1983</link><description>Paper: 2026/1983
 
 Authors: Quang Dao, Omid Bodaghi, Amirhossein Khajehpour, Giuseppe Vitto, Mohammadtaghi Badakhshan, Markos Georghiades, Fengrun Liu, Jiapeng Zhang, Justin Thaler
 
@@ -200,26 +200,12 @@ Summary: We prove that every information-theoretic two-server private informatio
 
 Authors: Daehyun Jang, Junho Lee
 
-Summary: Seur\'e and Suvanto's finite-field encoding (ePrint 2026/1102)
-requires controlling approximation errors amplified by integer lifts
-of field elements. For fields of large characteristic, the size of
-the lifts can limit the supported multiplicative depth.
-We combine the plaintext digit decomposition of Peikert et al.\
-(CRYPTO 2026) with the finite-field encoding of Seur\'e and Suvanto
-to support arithmetic over $\mathbb F_{p^r}$.
-The construction represents field elements by polynomials in two
-variables. Polynomial reduction preserves field operations and
-allows smaller integer lifts.
-We analyze error amplification by bounding powers of the
-multiplication operators of the lifts. Root evaluations determine
-the exponential growth rate. We use the carry lattice to bound
-the evaluation norm of an available lift for each message.
-Together with the errors introduced by CKKS operations, the
-operator bounds give sufficient decoding conditions for repeated
-squaring. We evaluate the bounds and supported depths for the
-secp256k1 prime and extension degrees $1$, $2$, and $4$.
-We also propose a bootstrapping procedure for refreshing the
-carry and approximation error.</description><guid isPermaLink="true">https://eprint.iacr.org/2026/1958</guid><pubDate>Thu, 10 Sep 2026 03:29:30 +0000</pubDate></item><item><title>More Efficient Secret-Shared Joins with Multiplicity via  Oblivious Sort Expansion</title><link>https://eprint.iacr.org/2026/1957</link><description>Paper: 2026/1957
+Summary: Seur\'e and Suvanto (ePrint 2026/1102) recently showed that, for small-characteristic primes $p$, arithmetic over $\mathbb{F}_{p^r}$ can be homomorphically evaluated in CKKS via a techniquethey call \emph{spectral encoding}. Their construction is, however, restricted to small characteristic: ciphertext multiplication amplifies the error by the operator norm of the multiplied plaintext. 
+Under the spectral encoding, a field element in $\mathbb F_{p^r}$ is encoded to a plaintext with operator norm at most $O(rp)$. The error
+therefore grows by a factor of $rp$ in the worst case, limiting the supported size of the characteristic prime $p$.
+In this work, we propose \emph{bi-spectral encoding}, which decomposes the coefficients of the plaintext polynomials used in the spectral encoding of Seur\'e and Suvanto. With a decomposition parameter $d$, a field element in $\mathbb F_{p^r}$ can be encoded to a plaintext with operator norm $O(rd{p^{1/d}})$, for a suitable choice of encoding parameters. We give a comprehensive analysis of error growth and derive a bound on error amplification under multiplication.
+For fields with a 256-bit prime characteristic (secp256k1) and extension degrees $1$, $2$, and $4$, we provide numerical simulations of error amplification and compute the maximum multiplication counts attainable in each case.
+We further present a bootstrapping procedure that reduces both the size of the plaintext and its noise.</description><guid isPermaLink="true">https://eprint.iacr.org/2026/1958</guid><pubDate>Thu, 10 Sep 2026 03:29:30 +0000</pubDate></item><item><title>More Efficient Secret-Shared Joins with Multiplicity via  Oblivious Sort Expansion</title><link>https://eprint.iacr.org/2026/1957</link><description>Paper: 2026/1957
 
 Authors: Xiaoxin Du, Xiaojie Guo, Pinzhi Chen, Tong Li, Zheli Liu
 
