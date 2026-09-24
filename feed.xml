@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>IACR ePrint Recent</title><link>https://eprint.iacr.org/</link><description>Mirror feed for Slack</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><language>en</language><lastBuildDate>Wed, 23 Sep 2026 21:26:52 +0000</lastBuildDate><ttl>180</ttl><item><title>Cryptanalysis of Goldreich's PRGs with MAJ–XOR Predicates</title><link>https://eprint.iacr.org/2026/2156</link><description>Paper: 2026/2156
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>IACR ePrint Recent</title><link>https://eprint.iacr.org/</link><description>Mirror feed for Slack</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><language>en</language><lastBuildDate>Thu, 24 Sep 2026 04:38:43 +0000</lastBuildDate><ttl>180</ttl><item><title>Cryptanalysis of Goldreich's PRGs with MAJ–XOR Predicates</title><link>https://eprint.iacr.org/2026/2156</link><description>Paper: 2026/2156
 
 Authors: Tianning Wang, Haoyang Wang, Fukang Liu, Willi Meier
 
