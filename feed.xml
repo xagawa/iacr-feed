@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>IACR ePrint Recent</title><link>https://eprint.iacr.org/</link><description>Mirror feed for Slack</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><language>en</language><lastBuildDate>Mon, 28 Sep 2026 21:12:21 +0000</lastBuildDate><ttl>180</ttl><item><title>Lower Bounds on Random-Oracle-Model Signature Length</title><link>https://eprint.iacr.org/2026/2237</link><description>Paper: 2026/2237
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>IACR ePrint Recent</title><link>https://eprint.iacr.org/</link><description>Mirror feed for Slack</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><language>en</language><lastBuildDate>Tue, 29 Sep 2026 05:37:14 +0000</lastBuildDate><ttl>180</ttl><item><title>Lower Bounds on Random-Oracle-Model Signature Length</title><link>https://eprint.iacr.org/2026/2237</link><description>Paper: 2026/2237
 
 Authors: Alon Chayet, Iftach Haitner, Mathias Marty, Eylon Yogev
 
@@ -65,8 +65,7 @@ We identify sufficient conditions for RPKI to provably achieve its goals (requir
 
 Authors: Zhenyu Xiong, Mingsheng Wang
 
-Summary: The ICCS Next-Generation Commercial Cryptography (NGCC) round-1 call received 84 public key candidates: 34 signatures, 41 KEMs and 9 key-exchange schemes. The call invites public evaluation. This report collects sixteen candidates that we broke against their unmodified reference implementations. All packages are
-collected at https://github.com/acprk/ngcc-round1-cryptanalysis (one subdirectory per scheme).</description><guid isPermaLink="true">https://eprint.iacr.org/2026/2232</guid><pubDate>Sun, 27 Sep 2026 09:13:50 +0000</pubDate></item><item><title>Truncated Differential Preimage Attacks via Differential-Linear Correlations</title><link>https://eprint.iacr.org/2026/2231</link><description>Paper: 2026/2231
+Summary: The ICCS Next-Generation Commercial Cryptography (NGCC) round-1 call received 84 public-key candidates for public evaluation. We present a design-level assessment that targets weaknesses no local code fix can close, identifying eight such flaws. Each recurs a pitfall already known from NIST PQC standardization: reducible-ring sub-ring projections that break IND-CPA below the claimed level; public data that fixes a value meant to remain secret, enabling public-key-only forgery or keyless decapsulation; static-key reuse without a chosen-ciphertext transform; and rejection sampling whose sign handling leaks an equivalent signing key. All findings were obtained with AI assistance. Artifacts: https://github.com/acprk/ngcc-round1-cryptanalysis.</description><guid isPermaLink="true">https://eprint.iacr.org/2026/2232</guid><pubDate>Sun, 27 Sep 2026 09:13:50 +0000</pubDate></item><item><title>Truncated Differential Preimage Attacks via Differential-Linear Correlations</title><link>https://eprint.iacr.org/2026/2231</link><description>Paper: 2026/2231
 
 Authors: Chunning Zhou, Kai Hu, Zhongfeng Niu, Thomas Peyrin, Hongyi Zhang
 
