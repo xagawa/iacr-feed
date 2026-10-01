@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>IACR ePrint Recent</title><link>https://eprint.iacr.org/</link><description>Mirror feed for Slack</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><language>en</language><lastBuildDate>Wed, 30 Sep 2026 22:10:34 +0000</lastBuildDate><ttl>180</ttl><item><title>Slashable Secrecy for Witness Encryption over Ethereum Finality</title><link>https://eprint.iacr.org/2026/2273</link><description>Paper: 2026/2273
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>IACR ePrint Recent</title><link>https://eprint.iacr.org/</link><description>Mirror feed for Slack</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><language>en</language><lastBuildDate>Thu, 01 Oct 2026 05:42:38 +0000</lastBuildDate><ttl>180</ttl><item><title>Slashable Secrecy for Witness Encryption over Ethereum Finality</title><link>https://eprint.iacr.org/2026/2273</link><description>Paper: 2026/2273
 
 Authors: Yihsuan Wu
 
@@ -640,9 +640,11 @@ We formalize GovBind with game-based definitions of correctness, soundness, and 
 
 Authors: Guru-Vamsi Policharla
 
-Summary: We construct the first Batched Threshold Encryption scheme with a transparent setup where public parameters are independent of the batch size. As a result batches of arbitrary sizes can be decrypted, without imposing an a priori fixed bound. We prove security under a constant size assumption -- the decisional bilinear square Diffie-Hellman assumption.
+Summary: We construct the first Batched Threshold Encryption scheme with a \emph{transparent} setup where public parameters are \emph{independent} of the batch size. As a result batches of arbitrary sizes can be decrypted, without imposing an a priori fixed bound. We prove security under a constant size assumption -- the decisional bilinear square Diffie--Hellman assumption.
 
-Setup is just a distributed key generation protocol to sample secret shares of a random value. Ciphertexts consist of two G1 elements, one G2 element and the encrypted message, plus a NIZK for CCA security (two F elements with a sigma protocol). Partial decryptions are a single G1 element, computed with one scalar multiplication. Decrypting a batch of B ciphertexts costs O(B) pairings and O(B log^2 B) group operations.</description><guid isPermaLink="true">https://eprint.iacr.org/2026/2205</guid><pubDate>Thu, 24 Sep 2026 16:46:29 +0000</pubDate></item><item><title>Provenance Proofs: Linkable Zero-Knowledge Derivation Relations for Hierarchical Deterministic Wallets</title><link>https://eprint.iacr.org/2026/2204</link><description>Paper: 2026/2204
+Setup is just a distributed key generation protocol to sample secret shares of a random value. Ciphertexts consist of two $\mathbb{G}_1$ elements, one $\mathbb{G}_2$ element and the encrypted message, plus a NIZK for CCA security (two $\mathbb{F}$ elements with a sigma protocol). Partial decryptions are a single $\mathbb{G}_1$ element, computed with one scalar multiplication. Decrypting a batch of $B$ ciphertexts costs $O(B)$ pairings and $O(B\log^2 B)$ group operations.
+
+In the ramp setting, with a gap between the reconstruction threshold $t$ and corruption threshold $f$ as in consensus protocols with $n\ge3f+1$, we construct a pairing-free batched threshold encryption scheme from DDH whose partial decryptions are $2B/(t-f)$ group elements, and reduce the aggregation cost of our pairing-based scheme to $O(B\log^2(B/(t-f)))$ group operations.</description><guid isPermaLink="true">https://eprint.iacr.org/2026/2205</guid><pubDate>Thu, 24 Sep 2026 16:46:29 +0000</pubDate></item><item><title>Provenance Proofs: Linkable Zero-Knowledge Derivation Relations for Hierarchical Deterministic Wallets</title><link>https://eprint.iacr.org/2026/2204</link><description>Paper: 2026/2204
 
 Authors: Vincenzo Botta, Michal Pospieszalski, Emanuele Ragnoli, Justus Ranvier
 
