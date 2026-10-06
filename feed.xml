@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>IACR ePrint Recent</title><link>https://eprint.iacr.org/</link><description>Mirror feed for Slack</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><language>en</language><lastBuildDate>Tue, 06 Oct 2026 06:11:56 +0000</lastBuildDate><ttl>180</ttl><item><title>Plotkin Attacks! On the (Mis)use of Raptor Codes in Asynchronous Verifiable Information Dispersal</title><link>https://eprint.iacr.org/2026/2338</link><description>Paper: 2026/2338
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>IACR ePrint Recent</title><link>https://eprint.iacr.org/</link><description>Mirror feed for Slack</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><language>en</language><lastBuildDate>Tue, 06 Oct 2026 15:52:54 +0000</lastBuildDate><ttl>180</ttl><item><title>Plotkin Attacks! On the (Mis)use of Raptor Codes in Asynchronous Verifiable Information Dispersal</title><link>https://eprint.iacr.org/2026/2338</link><description>Paper: 2026/2338
 
 Authors: Victor Shoup
 
@@ -201,36 +201,10 @@ Summary: Quantum attacks based on Simon's algorithm rely on Boolean functions wi
 
 Authors: Abdoul Ahad FALL
 
-Summary: Post-quantum (PQ) migration is usually tracked per
-asset, with Mosca’s inequality and a share of “migrated” systems.
-For a flow of sensitive data, the relevant questions are different:
-is every session that carries it keyed by a quantum-safe secret,
-what evidence supports that claim, and what can an assessor
-establish from outside? We propose an assessment method whose
-unit is the data path and whose verdicts are tied to evidence.
-Key lineage is an algebra on break dates: a derived key falls
-when all its inputs fall, and a key falls when any of its copies
-falls. 
-This covers TLS 1.3 resumption, key transport and keys
-wrapped several times. A verdict is a pair of strong-Kleene
-evaluations, one taking claims at face value and one admitting
-only claims that meet an evidence policy; the reachable pairs
-form four ordered labels. We characterize what an external
-probe can establish. A probe of the server decides a hop only
-if the server enforces PQ or cannot negotiate it; enforcement
-must be shown by a negative test paired with a positive control;
-a server that resumes sessions without a fresh key exchange
-leaves the layer undecided; and behind a load balancer the
-confidence of a negative test follows a sampling bound only
-under an independence assumption that a default balancer
-violates. 
-We implement the probe and validate its inference
-rules on 22 configurations of five server stacks built on three
-TLS libraries, including confounders and a heterogeneous load
-balancer. The same nominal configuration yields different states
-across implementations, so declared configuration cannot replace
-runtime evidence. A protocol for an internet-scale enforcement
-study accompanies the paper</description><guid isPermaLink="true">https://eprint.iacr.org/2026/2318</guid><pubDate>Sat, 03 Oct 2026 00:45:59 +0000</pubDate></item><item><title>SPIN: Fast Codes for Correlation Generation and Polynomial Commitments</title><link>https://eprint.iacr.org/2026/2317</link><description>Paper: 2026/2317
+Summary: Post-quantum (PQ) migration is usually tracked per asset, with Mosca’s inequality and a share of “migrated” systems. For a flow of sensitive data, the relevant questions are different: is every session that carries it keyed by a quantum-safe secret, what evidence supports that claim, and what can an assessor establish from outside? We propose an assessment method whose unit is the data path and whose verdicts are tied to evidence. Key lineage is an algebra on break dates: a derived key falls when all its inputs fall, and a key falls when any of its copies falls. 
+This covers TLS 1.3 resumption, key transport and keys wrapped several times. A verdict is a pair of strong-Kleene evaluations, one taking claims at face value and one admitting only claims that meet an evidence policy; the reachable pairs form four ordered labels. We characterize what an external probe can establish. A probe of the server decides a hop only if the server enforces PQ or cannot negotiate it; enforcement must be shown by a negative test paired with a positive control; a server that resumes sessions without a fresh key exchange
+leaves the layer undecided; and behind a load balancer the confidence of a negative test follows a sampling bound only under an independence assumption that a default balancer violates. 
+We implement the probe and validate its inference rules on 22 configurations of five server stacks built on three TLS libraries, including confounders and a heterogeneous load balancer. The same nominal configuration yields different states across implementations, so declared configuration cannot replace runtime evidence. A protocol for an internet-scale enforcement study accompanies the paper</description><guid isPermaLink="true">https://eprint.iacr.org/2026/2318</guid><pubDate>Sat, 03 Oct 2026 00:45:59 +0000</pubDate></item><item><title>SPIN: Fast Codes for Correlation Generation and Polynomial Commitments</title><link>https://eprint.iacr.org/2026/2317</link><description>Paper: 2026/2317
 
 Authors: Stanislav Peceny, Rahul Rachuri, Srinivasan Raghuraman, Peter Rindal
 
