@@ -1,5 +1,33 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>IACR ePrint Recent</title><link>https://eprint.iacr.org/</link><description>Mirror feed for Slack</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><language>en</language><lastBuildDate>Tue, 27 Oct 2026 15:18:15 +0000</lastBuildDate><ttl>180</ttl><item><title>HELLO, GOODBYE: Concurrent General Composition From Super-Rushing Security</title><link>https://eprint.iacr.org/2026/2651</link><description>Paper: 2026/2651
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>IACR ePrint Recent</title><link>https://eprint.iacr.org/</link><description>Mirror feed for Slack</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><language>en</language><lastBuildDate>Tue, 27 Oct 2026 22:07:04 +0000</lastBuildDate><ttl>180</ttl><item><title>When Algebraic Structure Meets Too Many Hints</title><link>https://eprint.iacr.org/2026/2654</link><description>Paper: 2026/2654
+
+Authors: Dongshu Cai, Yijian Liu, Xianhui Lu
+
+Summary: The hint framework of Dachman-Soled, Ducas, Gong, and Rossi (CRYPTO 2020), together with the later too-many-hints analyses from May and Nowakowski (ASIACRYPT 2023) and Cao, Jiang, and Cheng (CRYPTO 2025), gives a classification of secret-dependent hints and LLL-breaking hint thresholds for LWE schemes. These values are now frequently adopted as the default benchmark for side-channel security evaluation. We show that applying them as a security metric is problematic.
+
+DDGR categorizes hints based only on their local algebraic form, while the threshold analyses assume uniformly sampled hint vectors. Neither captures how the specific algebraic form of a hint governs the geometry of the resulting sparsified lattice. A hint’s class label and the corresponding uniform threshold therefore cannot, on their own, capture its real cryptanalytic power.
+
+We illustrate this mismatch with two forms of structured leakage that naturally appear in ring and module lattice implementations, validated via synthetic experiments on Kyber-512. NTT-domain residues qualify formally as mod-$q$ hints, yet they recover the full Kyber-512 secret with roughly half as many hints as the uniform mod-$q$ bound predicts. Finite-precision FFT samples fall into the weaker approximate-hint class, and still only need $25\%$--$55\%$ of the hint budget required for uniform perfect hints.
+
+The gap stems from algebraic structure: these hint families carry additional ring structure that enables tailored lattice recovery strategies, a distinction invisible under the uniform-sampling model.
+
+We do not propose new attack optimizations. Our findings indicate that DDGR hint classes and too-many-hints thresholds are syntactic descriptions, not standalone security metrics for real leakage traces. Evaluating a side-channel leak requires considering the algebraic structure of the hint vectors, not just their category and quantity.</description><guid isPermaLink="true">https://eprint.iacr.org/2026/2654</guid><pubDate>Tue, 27 Oct 2026 02:37:08 +0000</pubDate></item><item><title>Analyzing Compiler-induced Constant-time Violations with Compiler at Scale</title><link>https://eprint.iacr.org/2026/2653</link><description>Paper: 2026/2653
+
+Authors: Jing Liu, Lucía Martínez Gavier, Zhiyuan Zhang, Marcel Böhme, Gilles Barthe
+
+Summary: The constant-time programming policy is a de facto standard for cryptographic libraries to prevent timing side-channel attacks. However, compiler optimizations may break constant-time source code during compilation. Systematically preventing this requires understanding where a violation arises, how it is introduced, and which compiler configurations are problematic. Existing approaches analyze a single compilation point, either the final binary or one intermediate representation, and thus only partially answer the three questions.
+
+We propose CTGREP, a compiler-based framework that answers all three questions by applying differential analysis across the entire compilation chain. We use CTGREP to analyze seven complete cryptographic libraries across three Clang versions, six target platforms, and thousands of compiler configurations. We systematically detect compiler-induced constant-time violations in the wild and collaborate with library developers to address 48 cases. We further identify seven new problematic LLVM passes, bypass and improve the state-of-the-art compiler-flag-based mitigation. Finally, we quantify how the compiler version, target platform, and optimization configuration affect the violations. By covering entire libraries across the full compilation chain, CTGREP effectively detects remaining compiler-induced constant-time violations and complements the community's ongoing hardening efforts.</description><guid isPermaLink="true">https://eprint.iacr.org/2026/2653</guid><pubDate>Mon, 26 Oct 2026 21:06:42 +0000</pubDate></item><item><title>Reverse Substitution in Secret Sharing: The Critical One-Half Threshold and a Route to Superpolynomial Lower Bounds</title><link>https://eprint.iacr.org/2026/2652</link><description>Paper: 2026/2652
+
+Authors: Shahram Khazaei
+
+Summary: The contribution vector (convec) of a secret-sharing scheme is the vector of its normalized share sizes. The average and maximum coordinates of a convec give, respectively, the average and maximum information ratios of the scheme. Obtaining superlinear lower bounds on these quantities for unrestricted perfect secret sharing has remained a challenging open problem for about four decades.
+
+In this paper, we study substitution, a natural way to build complicated access structures from simpler ones: one participant of an outer access structure is replaced by an inner access structure. Given secret-sharing schemes for the two factors, the standard forward construction composes them into a scheme for the composite access structure. We study the converse question. Given an arbitrary scheme for the composite access structure, we ask to what extent its convec admits a reverse factorization into convecs for the outer and inner factors, up to a common multiplicative loss.
+
+Exact reversal is false: we give a counterexample whose optimal reverse factor is \(8/9\), with a composite scheme that is scalar-linear over every finite field. On the positive side, we prove that a factor \(1/2\) is always attainable, and that every fixed instance admits a strictly larger factor.
+
+For a recursive family built from Csirmaz’s classical access structure \(\mathcal C_k\), whose distinguished set has size \(k\), we identify a critical reverse factor that determines when the resulting lower bound becomes superlinear. This critical factor exceeds one half by only an amount of order \((\log k)/k\). Crossing it yields superlinear lower bounds, while any fixed positive excess above one half gives a route to superpolynomial lower bounds. Using only Shannon inequalities, the corresponding recursive factor cannot cross the critical value. Thus any improvement sufficient to pass this threshold must exploit constraints beyond the Shannon inequalities.</description><guid isPermaLink="true">https://eprint.iacr.org/2026/2652</guid><pubDate>Mon, 26 Oct 2026 20:16:40 +0000</pubDate></item><item><title>HELLO, GOODBYE: Concurrent General Composition From Super-Rushing Security</title><link>https://eprint.iacr.org/2026/2651</link><description>Paper: 2026/2651
 
 Authors: Anirudh Chandramouli
 
@@ -877,56 +905,4 @@ Summary: We study the cryptographic use of Shimura class group actions on supers
 
 Authors: Renas Bacho
 
-Summary: We improve the concrete parameters of the attacks on the low-dimensional vector representation (LDVR) problem by Rodríguez García and Tessaro (ePrint 2026/2126), whose attack on canonical evaluation points uses $5{,}020$ signers. By combining their Chinese remainder theorem construction with a generalized birthday search over many challenges, we obtain a concrete attack with $488$ signers and $173$ corruptions over the Curve25519 scalar field. In $64$ batches of $2^{25}$ challenges, the search finds solutions for six distinct challenges. We compare the counts measured at each stage of the search with predictions from an explicit heuristic model. For adversarially chosen evaluation points, we build on the binary attacks of Rodríguez García and Tessaro and give a construction that attains the optimal LDVR success probability for every oracle query budget when $2\le n\le253$ and $t_c=t$ in the uniform oracle model. At $228$ signers and $114$ corruptions, our implementation finds a successful subset using SHA-512 challenges after a cumulative total of $360.13$ million queries across two runs, taking $168.60$ seconds in total. We also give an explicit set of $256$ evaluation points for which an efficient subset search attack using $128$ corruptions succeeds with probability at least $51.92\%$ per uniform challenge. For both canonical and adversarially chosen evaluation points, we analyze the query complexity and report measured and estimated running times.</description><guid isPermaLink="true">https://eprint.iacr.org/2026/2554</guid><pubDate>Mon, 19 Oct 2026 13:19:54 +0000</pubDate></item><item><title>Near-Optimal Early Stopping with Optimal Communication</title><link>https://eprint.iacr.org/2026/2553</link><description>Paper: 2026/2553
-
-Authors: Fatima Elsheimy, Simon Holmgaard Kamp, Julian Loss, Charalampos Papamanthou
-
-Summary: Minimizing both the round and communication complexity of Byzantine agreement (BA) is a longstanding problem.
-In the synchronous setting, early stopping protocols aim to terminate in number of rounds that is proportional to the actual number $f\leq t$ of corruptions in an execution, rather than on the worst case threshold $t$.
-The lower bound on the round complexity for such protocols is known to be $\min\{f+2, t+1\}$ rounds.
-Existing protocols, however, achieve either round complexity close to the optimal bound or low communication complexity, but not both simultaneously.
-Elsheimy, Loss, and Papamanthou (ASIACRYPT 2024) obtain $(1+\epsilon)f+O(1)$ rounds for any $1&gt; \epsilon&gt;0$, with $O(n^4f \kappa)$ communication. In contrast, Lenzen and Sheikholeslami (PODC 2022) achieve asymptotically optimal $O(n \cdot t)$ communication for $t3$, but with a $25f+13$ number of rounds.
-
-In this work, we present deterministic synchronous Byzantine agreement protocols that achieve new tradeoffs between early stopping round complexity and communication. For $t3$, without cryptographic setup, we obtain $f+O(\sqrt{f\log f})$ termination rounds with optimal $O(n\cdot t)$ communication (here and throughout, $\sqrt{f}$ denotes $\sqrt{f+1}$ and $\log f$ denotes $\log(f+2)$, so that the bounds are well defined when $f=0$). Thus, our round complexity has the optimal leading coefficient of one, with a sublinear additive overhead. By allowing slightly higher communication, we reduce this overhead to $O(\sqrt f)$, obtaining $f+O(\sqrt f)$ rounds with $O(n\cdot t+f^2\log f)$ communication. Finally, for $t&lt;n/2$, assuming a public key infrastructure and threshold signatures, we obtain $f+O(\sqrt f)$ rounds with $O(n\cdot t\cdot\kappa)$ bits of communication, where $\kappa$ is the signature length.</description><guid isPermaLink="true">https://eprint.iacr.org/2026/2553</guid><pubDate>Mon, 19 Oct 2026 13:11:06 +0000</pubDate></item><item><title>CHARRM - Characterizing Hardware Leakage in the Robust Random Probing Model</title><link>https://eprint.iacr.org/2026/2552</link><description>Paper: 2026/2552
-
-Authors: Armand Schinkel, Pascal Sasdrich
-
-Summary: Masking is a prevalent countermeasure against passive physical implementation attacks such as Side-Channel Analysis (SCA). Despite its theoretical soundness, the practical application of masking is often fraught with complexity and prone to errors, underscoring the necessity for automated security verification. This paper presents a comprehensive methodology for efficient security verification in the $(g, t, c)$-robust $(p, \epsilon)$-random probing model. In particular, we advance the state-of-the-art concept of leakage characteristics to account for robust probe extension schemes across arbitrary circuit structures, enabling efficient leakage probability bound computation for glitch-extended and transition-extended robust probing scenarios. By further linking the leakage characteristic to the Set of Input Shares (SIS) function, we extend our verification methodology to established composability notions. Our automated reasoning framework demonstrates practicality and superior performance and accuracy for larger circuits in comparative evaluations with \ironmask as state-of-the-art competitor. For the first time, our method allows for the exact verification of larger, composed circuit structures, validated by corresponding case studies. Consequently, this work advances the state-of-the-art in automated hardware security verification, providing a versatile tool for evaluating the security of masked cryptographic implementations against SCA in the presence of transient physical effects.</description><guid isPermaLink="true">https://eprint.iacr.org/2026/2552</guid><pubDate>Mon, 19 Oct 2026 12:10:19 +0000</pubDate></item><item><title>Privacy with Leakage from Falsifiable Assumptions</title><link>https://eprint.iacr.org/2026/2551</link><description>Paper: 2026/2551
-
-Authors: Francesco Berti, Itamar Levi
-
-Summary: An inherent challenge in cryptography is finding realistic
-and meaningful models and assumptions. Such assumptions must be fal-
-sifiable. For symmetric-key cryptography in the standard model (i.e.,
-black-box without leakage), it is conjectured that we have identified
-the right assumptions: pseudorandom functions and permutations (PRFs
-and PRPs). However, when considering side-channel attacks (SCAs) that
-exploit physical side-channel leakage, the answer is less clear. Moreover,
-the requirements for integrity and privacy may differ in the leakage-aware
-SCA setting. For integrity: due to advances in the so-called unbounded
-leakage model, it is sufficient to claim integrity based only on black-box
-properties by instantiating a single strongly unpredictable-with-leakage
-(tweakable) block cipher. For privacy: one approach relied on simulatabil-
-ity, proposed by Yu and Standaert at CRYPTO 2013. That is, it should
-be possible to simulate leakage traces without access to the underlying
-secret key. Unfortunately, simulating the leakage behavior of a complex
-electronic system and arguing that distinguishing simulation from reality
-is hard has proved highly challenging (e.g., Galea et al., ASIACRYPT
-2014, and Deperz et al., Cascade 2026).
-In this paper, we propose a new model and assumption. We isolate a key
-component, namely the key-refreshing process, and provide a security
-definition for it that is both falsifiable in practice and usable in security
-proofs: secure refreshing. Like simulatability, this assumption is designed
-to capture the security of the key-refreshing process. Rather than re-
-lying on a simulator, however, we formalize security through a direct
-refreshing experiment that can be practically falsified by evaluation lab-
-oratories. Therefore, our approach avoids many of the concrete problems
-and challenges associated with previous models. Furthermore, inspired
-by this new assumption (and its accompanying model), and to provide
-an additional security assumption for the strongly SCA-protected leak-
-free component, we introduce strongly protected secure refreshing. As one
-concrete example, using these assumptions, we prove the privacy of the
-well-known PSV encryption scheme. We provide the first privacy proof
-based only on falsifiable assumptions and, importantly, without assuming
-that the strongly protected component is leak-free which can effectively
-translate to significant computational cost reduction.</description><guid isPermaLink="true">https://eprint.iacr.org/2026/2551</guid><pubDate>Mon, 19 Oct 2026 11:28:43 +0000</pubDate></item></channel></rss>
+Summary: We improve the concrete parameters of the attacks on the low-dimensional vector representation (LDVR) problem by Rodríguez García and Tessaro (ePrint 2026/2126), whose attack on canonical evaluation points uses $5{,}020$ signers. By combining their Chinese remainder theorem construction with a generalized birthday search over many challenges, we obtain a concrete attack with $488$ signers and $173$ corruptions over the Curve25519 scalar field. In $64$ batches of $2^{25}$ challenges, the search finds solutions for six distinct challenges. We compare the counts measured at each stage of the search with predictions from an explicit heuristic model. For adversarially chosen evaluation points, we build on the binary attacks of Rodríguez García and Tessaro and give a construction that attains the optimal LDVR success probability for every oracle query budget when $2\le n\le253$ and $t_c=t$ in the uniform oracle model. At $228$ signers and $114$ corruptions, our implementation finds a successful subset using SHA-512 challenges after a cumulative total of $360.13$ million queries across two runs, taking $168.60$ seconds in total. We also give an explicit set of $256$ evaluation points for which an efficient subset search attack using $128$ corruptions succeeds with probability at least $51.92\%$ per uniform challenge. For both canonical and adversarially chosen evaluation points, we analyze the query complexity and report measured and estimated running times.</description><guid isPermaLink="true">https://eprint.iacr.org/2026/2554</guid><pubDate>Mon, 19 Oct 2026 13:19:54 +0000</pubDate></item></channel></rss>
