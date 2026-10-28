@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>IACR ePrint Recent</title><link>https://eprint.iacr.org/</link><description>Mirror feed for Slack</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><language>en</language><lastBuildDate>Tue, 27 Oct 2026 22:07:04 +0000</lastBuildDate><ttl>180</ttl><item><title>When Algebraic Structure Meets Too Many Hints</title><link>https://eprint.iacr.org/2026/2654</link><description>Paper: 2026/2654
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>IACR ePrint Recent</title><link>https://eprint.iacr.org/</link><description>Mirror feed for Slack</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><language>en</language><lastBuildDate>Wed, 28 Oct 2026 05:29:35 +0000</lastBuildDate><ttl>180</ttl><item><title>When Algebraic Structure Meets Too Many Hints</title><link>https://eprint.iacr.org/2026/2654</link><description>Paper: 2026/2654
 
 Authors: Dongshu Cai, Yijian Liu, Xianhui Lu
 
@@ -850,9 +850,7 @@ Reducing ciphertext modulus \(Q\) for given output precision requirements under 
 
 In this work, we make average rather than maximum precision requirements govern the modulus budget and achieve savings in the baseline cost. Under decryption correctness constraints, we make these possible by allocating arbitrary output precision among independent values and quantify the modulus savings arising from differences in their precision requirements.
 
-As a bonus, our construction preserves the standard CKKS ciphertext format, which helps maintain compatibility with existing optimizations. And the construction inherits the IND-CPA security of CKKS without additional cryptographic assumptions. 
-
-With a 64-bit average precision requirement, we transfer 75 bits of precision without reducing evaluation depth and up to 735 bits while preserving correct initial recovery, raising the precision allocated to the target values to 2,269 bits. For six successive squarings of 256 messages targeting 224-bit precision, our implementation reduces the initial modulus bit length by 67\% compared with standard CKKS, allowing a fourfold reduction in ring dimension.</description><guid isPermaLink="true">https://eprint.iacr.org/2026/2562</guid><pubDate>Tue, 20 Oct 2026 12:56:59 +0000</pubDate></item><item><title>SALUS: Large-Scale Homomorphic Circuit Synthesis via Logic-Aware LUT Optimization</title><link>https://eprint.iacr.org/2026/2561</link><description>Paper: 2026/2561
+As a bonus, our construction preserves the standard CKKS ciphertext format, which helps maintain compatibility with existing optimizations. And the construction inherits the IND-CPA security of CKKS without additional cryptographic assumptions. In a repeated squaring experiment, we use 67% fewer initial modulus bits and one quarter of the ring dimension of standard CKKS, while meeting the same precision and security requirements.</description><guid isPermaLink="true">https://eprint.iacr.org/2026/2562</guid><pubDate>Tue, 20 Oct 2026 12:56:59 +0000</pubDate></item><item><title>SALUS: Large-Scale Homomorphic Circuit Synthesis via Logic-Aware LUT Optimization</title><link>https://eprint.iacr.org/2026/2561</link><description>Paper: 2026/2561
 
 Authors: Ran Mao, Zhou Zhang, Zian Zhao, Zhenyu Guan, Peng Yin, Song Bian
 
