@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>IACR ePrint Recent</title><link>https://eprint.iacr.org/</link><description>Mirror feed for Slack</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><language>en</language><lastBuildDate>Tue, 10 Nov 2026 03:28:09 +0000</lastBuildDate><ttl>180</ttl><item><title>An improved algorithm to solve the isogeny problem in dimension 2 with precomputation</title><link>https://eprint.iacr.org/2026/2808</link><description>Paper: 2026/2808
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>IACR ePrint Recent</title><link>https://eprint.iacr.org/</link><description>Mirror feed for Slack</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><language>en</language><lastBuildDate>Tue, 10 Nov 2026 14:46:01 +0000</lastBuildDate><ttl>180</ttl><item><title>An improved algorithm to solve the isogeny problem in dimension 2 with precomputation</title><link>https://eprint.iacr.org/2026/2808</link><description>Paper: 2026/2808
 
 Authors: Maria Corte-Real Santos
 
