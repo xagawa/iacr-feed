@@ -1,5 +1,28 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>IACR ePrint Recent</title><link>https://eprint.iacr.org/</link><description>Mirror feed for Slack</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><language>en</language><lastBuildDate>Tue, 10 Nov 2026 14:46:01 +0000</lastBuildDate><ttl>180</ttl><item><title>An improved algorithm to solve the isogeny problem in dimension 2 with precomputation</title><link>https://eprint.iacr.org/2026/2808</link><description>Paper: 2026/2808
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>IACR ePrint Recent</title><link>https://eprint.iacr.org/</link><description>Mirror feed for Slack</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><language>en</language><lastBuildDate>Tue, 10 Nov 2026 21:16:17 +0000</lastBuildDate><ttl>180</ttl><item><title>QUASI: Post-Quantum Quorum Attestation of Pre-Validated Statements</title><link>https://eprint.iacr.org/2026/2810</link><description>Paper: 2026/2810
+
+Authors: Maksym Ioffe, Dahlia Malkhi
+
+Summary: We present QUASI, a newly conceived class of protocols that
+enable a group of parties to produce a publicly verifiable
+attestation about a pre-validated statement. Designed for
+quorum-based systems, QUASI enables parties to attest to
+external entities that the statement is valid. Surprisingly,
+each party need not sign the entire statement: authenticating
+only a small subset of symbols suffices for the quorum to
+attest to the whole. A simple deterministic construction
+illustrates this possibility. Built purely from hashing and
+error correction, QUASI achieves small per-party contributions and low attestation generation and verification costs, without relying on SNARKs for aggregation.
+
+Our main contribution is a randomized construction achieving reductions of more than $10\times$ in per-party contribution size and hash computations for generation and verification, compared with full hash-based signatures.
+
+QUASI is a generic primitive supporting diverse applications. Two principal use cases are external attestation for signature-free consensus, enabling clients to verify statements about committed state; and preprocessing for SNARK-based aggregation, compounding QUASI's savings with succinct-proof compression.</description><guid isPermaLink="true">https://eprint.iacr.org/2026/2810</guid><pubDate>Sat, 07 Nov 2026 02:32:00 +0000</pubDate></item><item><title>Pastel: Single Secret Leader Election with Private Weights</title><link>https://eprint.iacr.org/2026/2809</link><description>Paper: 2026/2809
+
+Authors: Jung Hee Cheon, Kevin Choi, Intak Hwang, Jaehee Kang, Alireza Kavousi, Junho Lee, Yongdong Yeo
+
+Summary: A single secret leader election (SSLE) protocol allows an election of exactly one leader among $n$ parties in a secrecy-preserving manner, where only the elected leader knows it has won until it publicly announces and claims leadership. Motivated by proof-of-stake blockchains where stakes are stored in an encrypted or committed form for the sake of privacy, we design and implement the first SSLE protocol with private weights. Each party's probability of winning an election in our protocol is weighted by stake, and these weights are private. Prior schemes in the literature only allow probabilistic (i.e. expectation of one but can be zero or many leaders) elections in the same setting.
+
+Preserving privacy also means public verification is paramount in order for a protocol to be practically reliable. In this respect, our protocol achieves security against malicious adversaries with a concrete implementation. In particular, we concretely implement the needed zero-knowledge proofs and thus do not rely on slashing (financial penalties) to achieve end-to-end malicious security, though slashing can still serve as a performance optimization. Along the way, we observe that previous SSLE protocols in a setting without private weights (either unweighted or with public weights) are either maliciously secure with implementation or post-quantum secure but not both, while our protocol achieves both.</description><guid isPermaLink="true">https://eprint.iacr.org/2026/2809</guid><pubDate>Sat, 07 Nov 2026 01:01:10 +0000</pubDate></item><item><title>An improved algorithm to solve the isogeny problem in dimension 2 with precomputation</title><link>https://eprint.iacr.org/2026/2808</link><description>Paper: 2026/2808
 
 Authors: Maria Corte-Real Santos
 
@@ -152,7 +175,7 @@ The resulting scheme has better performance when compared to other SEP-based sig
 
 Authors: Paul Cesaretti
 
-Summary: A distance-sensitive set representation stores a set $S$ from a metric space $(U,d)$ and answers queries of the form "is some element of $S$ within distance $r$ of $q$?''. Existing differentially private constructions are confined to Hamming space, because they route the query through a signature map built for that metric. We give a framework that removes this restriction. The released object records only the occupancy of a fixed public partition of $U$, so privacy transfers unchanged from an off-the-shelf private membership structure, and the entire metric dependence collapses into one packing quantity, the \emph{straddle number} $\kappa$: the largest number of cells a ball of radius $r$ can meet. Any metric admitting a partition of width at most $(c-1)r$ and straddlenumber $\kappa$ then has an $\varepsilon$-differentially private $(c,r)$-representation with $\varepsilon =\ln(2\kappa/\alpha)$ in $O(k\log(\kappa/\alpha))$ bits.
+Summary: A distance-sensitive set representation stores a set $S$ from a metric space $(U,d)$ and answers queries of the form "is some element of $S$ within distance $r$ of $q$?''. Existing differentially private constructions are confined to Hamming space, because they route the query through a signature map built for that metric. We give a framework that removes this restriction. The released object records only the occupancy of a fixed public partition of $U$, so privacy transfers unchanged from an off-the-shelf private membership structure, and the entire metric dependence collapses into one packing quantity, the straddle number $\kappa$: the largest number of cells a ball of radius $r$ can meet. Any metric admitting a partition of width at most $(c-1)r$ and straddlenumber $\kappa$ then has an $\varepsilon$-differentially private $(c,r)$-representation with $\varepsilon =\ln(2\kappa/\alpha)$ in $O(k\log(\kappa/\alpha))$ bits.
 
 Instantiating $\kappa$ gives matching upper and lower bounds in $\ell_\infty$ for partition-based constructions ($\varepsilon=O(\log d)$ at $c=\Theta(d)$, against $\varepsilon=\Omega(d)$ at constant $c$), and a randomized, dimension-free construction for every $\ell_p$ (one probe and $\varepsilon=\ln(2/\alpha)$ regardless of $d$) at the cost of a weaker, non-oblivious guarantee whose price is exactly this $\log d$ gap. For metrics available only through a distance oracle, we build the partition from a public net and a public navigable graph, and show that greedy search on that graph both locates and enumerates the cells a query must probe; on a $\lambda$-doubling metric this gives $\varepsilon\le 5\ln\lambda+\ln(2/\alpha)$. We further show that the per-query form of the guarantee is forced rather than chosen: any representation correct on all queries simultaneously requires $\varepsilon\ge\ln M+\ln(1/\alpha)-O(1)$ for $M$ the packing number of the whole space, and on doubling metrics this is achievable up to an additive $O(dim_D\log\frac{c}{c-1})$. Finally, the space bound is optimal in $k$ and $\alpha$.</description><guid isPermaLink="true">https://eprint.iacr.org/2026/2788</guid><pubDate>Thu, 05 Nov 2026 17:43:10 +0000</pubDate></item><item><title>Symbolic forward secrecy analysis of ML-KEM</title><link>https://eprint.iacr.org/2026/2787</link><description>Paper: 2026/2787
 
@@ -743,46 +766,4 @@ Authors: Jiseung Kim, Junhyuk Kwon, Changmin Lee, JeongHwan Lee
 Summary: We give provable randomized algorithms for the $\gamma$-approximate Closest Vector Problem ($\gamma$-CVP) with $\gamma=5/3$ and the exact Shortest Vector Problem (SVP) in the Euclidean norm on random $q$-ary lattices. These lattices consist of the integer vectors mapped to zero modulo $q$ by a uniformly random matrix $\mathbf{H}\in(\mathbb{Z}/q\mathbb{Z})^{m\times n}$, for any integer $q\ge2$. For input density $\delta=m\log_2q/n$ with $0\le\delta\le1$, the running times are $2^{0.2668n+o(n)}$ for $5/3$-CVP and $2^{0.2741n+o(n)}$ for exact SVP, with polynomial input-length factors suppressed. For $1&lt;\delta\le3/2$, the respective bounds are $2^{0.56n+o(n)}$ and $2^{0.468n+o(n)}$. For all but a negligible fraction of matrices, both algorithms succeed with overwhelming probability over their internal randomness. 
 Notably, for $0\le\delta\le1$, our provable bounds fall below even the $2^{0.2925n+o(n)}$ heuristic estimate for classical lattice sieving.
 
-As a cryptographic application, we prove that signatures in the original construction of Gentry, Peikert, and Vaikuntanathan (GPV) can be forged in time $2^{0.0534n+o(n)}$ for $n\ge5m\log_2q$. For a $128$-bit security target, a leading-term estimate gives $n\approx2400$ and a public key of roughly $144$ kB, indicating a substantial storage burden.</description><guid isPermaLink="true">https://eprint.iacr.org/2026/2711</guid><pubDate>Sat, 31 Oct 2026 16:00:03 +0000</pubDate></item><item><title>Hidden Curves and Short Duals: Cubic Jets, Dual Leaks, and the Limits of Masked-Code Encryption</title><link>https://eprint.iacr.org/2026/2710</link><description>Paper: 2026/2710
-
-Authors: Yongge Wang
-
-Summary: Masked-code encryption hides a decodable code behind a transformation meant to
-make it look random. We study the two masks proposed as compact alternatives
-to Goppa codes---Wang's RLCE and the $(U\,|\,U{+}V)$ construction of
-UVW-KEM---over the decodable hidden codes they have been or could be applied
-to, and find that, among the families examined, none yields a compact trapdoor.
-
-Over Reed--Solomon and algebraic-geometry codes the mask hides a \emph{curve},
-and curves are not hidden from jets. We explain the October 2026 key recovery
-of UVW-KEM (NGCC) and show it is not specific to UVW: for \emph{hidden-pairing
-codes} we bound from below the dependencies among order-$r$ jets of degree-$d$
-forms at the columns of any shortening---for cubics $2k_1-k_2-k_l+2$ (UVW) and
-$2(n{-}k)-w-k_l+2$ (RLCE), attained in every regime tested, and we prove that
-the structured part of the dependency space carries the pairing and the secret
-ratios in closed form. Every proposed UVW parameter set has the predicted cubic
-deficiency (key recovery has been demonstrated at UVW-KEM-128). RLCE's long-key
-regime $w\ge n-k$, out of reach of the square-code attack for eight years, falls
-at degree three: on a full-size Level-1 parameter set we recover an
-equivalent key from the public key alone and decrypt fresh ciphertexts. HermitianRLCE is
-distinguished the same way. A forcing law, a master count and a redundancy law
-make the \emph{jet degree} an invariant of hidden-pairing codes: within that
-model, each unit of structural depth costs a unit of redundancy.
-
-Without a curve the masks fail differently: both \emph{preserve the dual} of
-the hidden code, at most doubling the weight of every dual word. polarRLCE at
-rate $\le2/3$ leaks dual words found in $47$--$94$ bits; at higher rates no
-certified decoding radius supports $143$-bit security up to length $16384$,
-and at $32768$ the key is $58$\,MiB, $234\times$ Classic McEliece. LDPC codes
-leak their sparse checks, MDPC codes are better left unmasked, and UVW carries
-a matched-pair subspace for every hidden code. Reed--Muller-heavy codes under
-RLCE resist every attack here at $4$\,MiB keys, but only if a decoder at
-$3.4\times$ the bounded-distance radius exists.</description><guid isPermaLink="true">https://eprint.iacr.org/2026/2710</guid><pubDate>Sat, 31 Oct 2026 15:22:00 +0000</pubDate></item><item><title>Private Accounts Without $O(N)$ Work Through a Hybrid State Model</title><link>https://eprint.iacr.org/2026/2709</link><description>Paper: 2026/2709
-
-Authors: Philipp Gackstatter, François Garillot, Marti Górny, Adrian Hamelink, Al Kindi, Philippe Laferrière, Robin Salen, Brian Seong, Bobbin Threadbare
-
-Summary: Privacy-preserving smart contracts face a scalability problem. In account-balance-vector designs, hiding which accounts changed requires that every transaction perform an indistinguishable update over the global state, so validators pay work linear in the number of accounts for every private transfer. UTXO systems avoid this by validating local spends, but do not provide the same account-style programming model.
-
-We argue that the usual "account vs.~UTXO" framing conflates state representation and execution model, two choices that can be made separately. Miden, an Ethereum Layer 2, separates them. It uses persistent accounts for programmability, asynchronous notes for value transfer, and client-side proving for execution. Validators verify proofs and update commitments without re-executing transactions or accessing uninvolved state.
-
-The result is an account-based platform with private transfers and private computation, while keeping validator work per transaction logarithmic in the number of accounts.</description><guid isPermaLink="true">https://eprint.iacr.org/2026/2709</guid><pubDate>Sat, 31 Oct 2026 14:36:57 +0000</pubDate></item></channel></rss>
+As a cryptographic application, we prove that signatures in the original construction of Gentry, Peikert, and Vaikuntanathan (GPV) can be forged in time $2^{0.0534n+o(n)}$ for $n\ge5m\log_2q$. For a $128$-bit security target, a leading-term estimate gives $n\approx2400$ and a public key of roughly $144$ kB, indicating a substantial storage burden.</description><guid isPermaLink="true">https://eprint.iacr.org/2026/2711</guid><pubDate>Sat, 31 Oct 2026 16:00:03 +0000</pubDate></item></channel></rss>
