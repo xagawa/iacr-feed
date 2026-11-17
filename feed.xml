@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>IACR ePrint Recent</title><link>https://eprint.iacr.org/</link><description>Mirror feed for Slack</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><language>en</language><lastBuildDate>Mon, 16 Nov 2026 19:30:47 +0000</lastBuildDate><ttl>180</ttl><item><title>Multiparty Computation with Minimal Overhead without Circuit Transformation</title><link>https://eprint.iacr.org/2026/2891</link><description>Paper: 2026/2891
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>IACR ePrint Recent</title><link>https://eprint.iacr.org/</link><description>Mirror feed for Slack</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><language>en</language><lastBuildDate>Tue, 17 Nov 2026 03:44:38 +0000</lastBuildDate><ttl>180</ttl><item><title>Multiparty Computation with Minimal Overhead without Circuit Transformation</title><link>https://eprint.iacr.org/2026/2891</link><description>Paper: 2026/2891
 
 Authors: Aditya Hegde, Phuoc Van Long Pham, Mingyuan Wang
 
