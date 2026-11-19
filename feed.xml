@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>IACR ePrint Recent</title><link>https://eprint.iacr.org/</link><description>Mirror feed for Slack</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><language>en</language><lastBuildDate>Thu, 19 Nov 2026 02:29:31 +0000</lastBuildDate><ttl>180</ttl><item><title>Bounds of Falcon's Fast Fourier Sampler with Fixed-Point Arithmetic</title><link>https://eprint.iacr.org/2026/2902</link><description>Paper: 2026/2902
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>IACR ePrint Recent</title><link>https://eprint.iacr.org/</link><description>Mirror feed for Slack</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><language>en</language><lastBuildDate>Thu, 19 Nov 2026 11:29:09 +0000</lastBuildDate><ttl>180</ttl><item><title>Bounds of Falcon's Fast Fourier Sampler with Fixed-Point Arithmetic</title><link>https://eprint.iacr.org/2026/2902</link><description>Paper: 2026/2902
 
 Authors: Vincent Hwang
 
@@ -19,7 +19,7 @@ Authors: Filipe Martins Vono, André Oliveira Naufel de Toledo, Valéria Gonzaga
 
 Summary: In sixteen variables, a Boolean function of degree at most four is bent as soon as every Walsh coefficient is $4$ or $5$ modulo $9$. More generally, let $m\ge4$ and $M=2^m$. We prove that a function of degree at most four on $4m$ variables is bent if all its Walsh coefficients are congruent to $\pm M^2$ modulo a single odd integer $p\ge9M/16$. The sign may vary with the frequency. This improves the earlier sufficient bound $p&gt;7M/12$ and includes the endpoint $M=16,\ p=9$. The proof uses the degrees of the low binary digits of the normalized spectrum, low-weight Reed-Muller words, and bounds on groups of Fourier coefficients. As an application, a rotation-symmetric bent function of degree at most four in $888$ variables remains bent on the $24$-variable subspace obtained by repeating a block $37$ times.</description><guid isPermaLink="true">https://eprint.iacr.org/2026/2900</guid><pubDate>Sun, 15 Nov 2026 16:24:32 +0000</pubDate></item><item><title>Aker: Efficient Two-Party SLH-DSA</title><link>https://eprint.iacr.org/2026/2899</link><description>Paper: 2026/2899
 
-Authors: Yaron Salman, Ben Riva, Dimitry Kogan
+Authors: Yaron Salman, Ben Riva, Dmitry Kogan
 
 Summary: Threshold signing is widely deployed to protect cryptographic keys, but extending these deployments to post-quantum signatures remains challenging. While NIST's lattice-based signatures now have efficient threshold protocols, distributed signing for SLH-DSA (FIPS 205), NIST's stateless hash-based signature standard, has been considered prohibitively expensive because it lacks the algebraic structure those protocols typically exploit.
 
