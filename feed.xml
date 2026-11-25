@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>IACR ePrint Recent</title><link>https://eprint.iacr.org/</link><description>Mirror feed for Slack</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><language>en</language><lastBuildDate>Tue, 24 Nov 2026 23:51:04 +0000</lastBuildDate><ttl>180</ttl><item><title>Where on Earth? Zero-Knowledge Proof of Location from a Phone Photograph of the Moon and Stars</title><link>https://eprint.iacr.org/2026/3002</link><description>Paper: 2026/3002
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>IACR ePrint Recent</title><link>https://eprint.iacr.org/</link><description>Mirror feed for Slack</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><language>en</language><lastBuildDate>Wed, 25 Nov 2026 08:18:45 +0000</lastBuildDate><ttl>180</ttl><item><title>Where on Earth? Zero-Knowledge Proof of Location from a Phone Photograph of the Moon and Stars</title><link>https://eprint.iacr.org/2026/3002</link><description>Paper: 2026/3002
 
 Authors: Pavel Shuvalov
 
